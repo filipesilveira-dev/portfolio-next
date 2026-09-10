@@ -6,7 +6,10 @@ export function Hero(){
     return(
         <section className={style.hero}>
             <Profile/>
-            <Image src="https://placehold.co/575x375" alt="Imagem hero" width={375} height={375} unoptimized/>
+
+            <div className={style.img_wrapper}>
+                <Image src="/heroAlt-light.png" alt="Imagem hero" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill unoptimized/>
+            </div>
         </section>
     )
 }

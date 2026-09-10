@@ -2,6 +2,17 @@
     display: flex;
     flex-direction: column;
 }
+.img_wrapper {
+  position: relative; /* Obrigatório ao usar fill no Next Image */
+  width: 100%;        /* Faz o container ocupar toda a largura disponível */
+  height: 20rem;     /* Altura fixa ou você pode usar aspect-ratio */
+}
+
+/* Mantém as proporções da imagem sem distorcer dentro do container */
+.img_wrapper {
+  object-fit: contain; 
+}
+
 
 @media (min-width: 576px) {
   .hero{
