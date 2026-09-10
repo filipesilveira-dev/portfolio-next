@@ -8,7 +8,7 @@ export function Hero(){
             <Profile/>
 
             <div className={style.img_wrapper}>
-                <Image src="/heroAlt-light.png" alt="Imagem hero" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill unoptimized/>
+                <Image src="/heroAlt-light.avif" alt="Imagem hero" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill unoptimized/>
             </div>
         </section>
     )
