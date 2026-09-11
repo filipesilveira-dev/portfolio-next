@@ -45,12 +45,12 @@
 
 @media (min-width: 576px) {
     /* FOOTER COLADO NO FUNDO PROVISORIAMENTE */
-  .footer {
+  /* .footer {
     position: fixed;
     bottom: 0;
     z-index: 1000;
     margin-bottom: .5rem;
-  }
+  } */
 
   .footer_container {
     flex-direction: row;
