@@ -2,20 +2,23 @@ import style from "./Card.module.css"
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Card() {
+interface CardProps{
+  name: string;
+  resume: string;
+  tech: string[];
+}
+
+export default function Card({name, resume, tech}: CardProps) {
   return (
     <>
-        
-      <Link href="/" className={style.link_wrapper}>
+      <Link href="/projects" className={style.link_wrapper}>
       
-        <Image src="https://placehold.co/300x200" width={200} height={300} alt="Miniatura do projeto" unoptimized/>
+        <Image className={style.card_img} src="https://placehold.co/135x90" width={135} height={90} alt="Miniatura do projeto" unoptimized/>
         <div className={style.project_info_container}>
-            <h3>Nome do projeto</h3>
-            <p>Resumo do projeto</p>
+            <h3>{name}</h3>
+            <p>{resume}</p>
             <div className={style.span_wrapper}>
-                <span>Tecnologia 1</span>
-                <span>Tecnologia 2</span>
-                <span>Tecnologia 3</span>
+                {tech.map((t)=>(<span key={t}>{t}</span>))}
             </div>
         </div>
       </Link>

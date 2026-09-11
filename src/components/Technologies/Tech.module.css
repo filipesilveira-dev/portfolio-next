@@ -5,7 +5,7 @@
 }
 
 .carousel {
-  margin: 2rem auto;
+  margin: .5rem auto;
   width: 90%;
   display: flex;
   /* cria barra de rolagem no eixo x do overflow */
