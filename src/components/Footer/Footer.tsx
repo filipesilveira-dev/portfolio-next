@@ -6,7 +6,7 @@ export function Footer() {
     <footer className={style.footer}>
       <div className={style.footer_container}>
         <div className={style.logo_container}>
-          <a href="https://github.com/filipesilveira-dev" target="_blanck">
+          <a href="https://github.com/filipesilveira-dev" target="_blanck" title="GitHub">
             <Image
               src="/github.png"
               alt="Logo do GitHub"
@@ -14,7 +14,7 @@ export function Footer() {
               height={20}
             />
           </a>
-          <a href="https://www.linkedin.com/in/filipe-silveira-511889351/" target="_blanck">
+          <a href="https://www.linkedin.com/in/filipe-silveira-511889351/" target="_blanck" title="LinkedIn">
             <Image
               src="/linkedin.png"
               alt="Logo do LinkedIn"
@@ -22,10 +22,10 @@ export function Footer() {
               height={20}
             />
           </a>
-          <a>
+          <a title="filipesilveira.dev@gmail.com">
             <Image
-              src="/whatsapp.png"
-              alt="Logo do Whatsapp"
+              src="/email.svg"
+              alt="Logo do Eamail"
               width={20}
               height={20}
             />
