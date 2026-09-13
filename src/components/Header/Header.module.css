@@ -11,7 +11,14 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 
+  /* necessário para o dropdown se ancorar aqui */
   position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header_open {
+  position: relative;
   top: 0;
   z-index: 1000;
 }
@@ -38,29 +45,26 @@
   background-color: #f0f0f0;
 }
 
-.open {
-  display: none;
-}
-
 .nav_bar {
   display: none;
 }
 
-.header_open {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem 1rem 1rem;
+/* Dropdown: elemento que o Motion controla sozinho.
+   Fica sobreposto (absolute) abaixo do header fixo,
+   sem empurrar nem alterar o layout do header. */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
-  height: 60%;
+  overflow: hidden;
   background-color: #fdfdfd;
-  margin-right: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-  gap:1rem;
+  z-index: 999;
+}
 
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.nav_bar_open {
+  padding: 0 1rem 1rem 1rem;
 }
 
 .nav_bar_list_open {
@@ -68,33 +72,37 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 25vh;
+  gap: 1rem;
+  padding-top: 1rem;
 }
 
-.nav_bar_list_item_open{
+.nav_bar_list_item_open {
   width: 90%;
+  padding: 0.25rem;
   border-radius: 10px;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
 }
 
-.nav_bar_list_item_open:hover{
-  background-color: #f0f0f0 ;
-}
-
-.symbols_container_open {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 4rem;
-  /* padding: 1rem; */
+.nav_bar_list_item_open:hover {
+  background-color: #f0f0f0;
 }
 
 .menu_toggle_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   gap: 1rem;
+}
+
+.toggle_symbol {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.toggle_symbol:hover {
+  background-color: #f0f0f0;
 }
 
 @media (min-width: 768px) {
@@ -102,19 +110,19 @@
     display: none;
   }
 
-  .nav_bar_open {
+  .dropdown {
     display: none;
   }
 
   .nav_bar {
     display: block;
-    width: 50%;
+    width: 60%;
   }
 
   .nav_bar_list {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
     font-weight: bold;
   }
@@ -128,6 +136,16 @@
 
   .nav_bar {
     display: block;
-    width: 40%;
+  }
+
+  .nav_bar_item {
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+
+  .nav_bar_item:hover {
+    /* background-color: #f0f0f0; */
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.082);
   }
 }

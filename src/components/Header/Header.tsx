@@ -9,25 +9,26 @@ import { AnimatePresence, motion } from "motion/react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className={`${isOpen ? style.header_open : style.header}`}>
-      <section
-        className={`${isOpen ? style.symbols_container_open : style.symbols_container}`}
-      >
+    <header className={`${style.header} ${isOpen? style.header_open: ""}`}>
+      <section className={style.symbols_container}>
         <Link href="/">
           <Image src="/logo.svg" alt="Imagem da logo" width={40} height={40} />
         </Link>
+
         <nav className={style.nav_bar}>
           <ul className={style.nav_bar_list}>
-            <Link href="/projects">Projetos</Link>
-            <Link href="/about">Sobre</Link>
-            <Link href="/skills">Habilidades</Link>
-            <Link href="/articles">Artigos</Link>
-            <Link href="/contact">Contato</Link>
+            <Link href="/" className={style.nav_bar_item}>Início</Link>
+            <Link href="/projects" className={style.nav_bar_item}>Projetos</Link>
+            <Link href="/about" className={style.nav_bar_item}>Sobre</Link>
+            <Link href="/skills" className={style.nav_bar_item}>Habilidades</Link>
+            <Link href="/articles" className={style.nav_bar_item}>Artigos</Link>
+            <Link href="/contact" className={style.nav_bar_item}>Contato</Link>
           </ul>
         </nav>
+
         <div className={style.menu_toggle_wrapper}>
-          {/* Botão para abrir o navbar em telas pequenas. FALTA AJUSTAR LAYOUT QUANDO ABRE*/}
           <button
             className={style.hamburger}
             onClick={() => setIsOpen(!isOpen)}
@@ -39,37 +40,62 @@ export function Header() {
               height={24}
             />
           </button>
-          <Image src="/moon.svg" alt="Imagem de lua" width={24} height={24} />
+          <Image src="/moon.svg" alt="Imagem de lua" width={36} height={36} className={style.toggle_symbol}/>
         </div>
       </section>
 
+      {/* Dropdown fora do fluxo do header, não altera o layout dele */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }} /* Estado inicial ao surgir */
-            animate={{ height: "auto", opacity: 1 }} /* Estado final (aberto) */
-            exit={{ height: 0, opacity: 0 }} /* Estado de saída ao fechar */
-            transition={{
-              duration: 0.3,
-              ease: "easeInOut",
-            }} /* Tempo e curva */
-            style={{ overflow: "hidden" }}
+            className={style.dropdown}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <nav className={style.nav_bar_open}>
               <ul className={style.nav_bar_list_open}>
-                <Link className={style.nav_bar_list_item_open} href="/projects">
+                <Link
+                  className={style.nav_bar_list_item_open}
+                  href="/"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  Início
+                </Link>
+                <Link
+                  className={style.nav_bar_list_item_open}
+                  href="/projects"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   Projetos
                 </Link>
-                <Link className={style.nav_bar_list_item_open} href="/about">
+                <Link
+                  className={style.nav_bar_list_item_open}
+                  href="/about"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   Sobre
                 </Link>
-                <Link className={style.nav_bar_list_item_open} href="/skills">
+                <Link
+                  className={style.nav_bar_list_item_open}
+                  href="/skills"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   Habilidades
                 </Link>
-                <Link className={style.nav_bar_list_item_open} href="/articles">
+                <Link
+                  className={style.nav_bar_list_item_open}
+                  href="/articles"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   Artigos
                 </Link>
-                <Link className={style.nav_bar_list_item_open} href="/contact">
+                <Link
+                  className={style.nav_bar_list_item_open}
+                  href="/contact"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   Contato
                 </Link>
               </ul>
