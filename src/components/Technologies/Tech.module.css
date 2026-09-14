@@ -62,8 +62,12 @@
 
 @media (min-width: 1200px) {
     .tech_container{
-        width: 90%;
+        width: 80%;
         margin: auto;
+    }
+
+    .carousel{
+      width: 70%;
     }
   }
 

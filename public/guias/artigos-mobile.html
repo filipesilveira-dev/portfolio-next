@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Artigos — Mobile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#5437a3; --primary-badge-bg:#eee9fe; --accent:#09B8A9;
+    --bg:#ffffff; --bg-soft:#fbfbfe; --text-title:#111827; --text-body:#4b5563;
+    --card-border:rgba(84,55,163,0.12); --card-shadow:0 2px 8px rgba(0,0,0,0.06); --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{width:375px; font-family:'Inter',sans-serif; color:var(--text-body); background:var(--bg);}
+  h1,h2,.brand,.title-link{font-family:'Space Grotesk',sans-serif;}
+
+  header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 20px; border-bottom:1px solid #f0eefc;
+  }
+  .brand{font-size:20px; font-weight:700; color:var(--accent);}
+  .burger{display:flex; flex-direction:column; gap:4px;}
+  .burger span{width:22px; height:2px; background:var(--primary); border-radius:2px;}
+
+  .page-head{padding:28px 20px 20px;}
+  .page-head h1{font-size:26px; color:var(--text-title); font-weight:700; margin-bottom:8px;}
+  .page-head p{font-size:14px; line-height:1.55;}
+
+  .toolbar{padding:0 20px 20px; display:flex; flex-direction:column; gap:14px;}
+  .search-box{
+    display:flex; align-items:center; gap:10px; padding:11px 14px;
+    border:1px solid var(--card-border); border-radius:12px; background:var(--bg-soft);
+  }
+  .search-box input{border:none; background:none; outline:none; font-size:13.5px; width:100%; color:var(--text-body); font-family:'Inter',sans-serif;}
+  .chips{display:flex; gap:8px; overflow-x:auto; padding-bottom:4px;}
+  .chip{
+    flex-shrink:0; padding:7px 15px; border-radius:999px; font-size:12.5px; font-weight:600;
+    border:1px solid var(--card-border); color:var(--text-body); background:var(--bg); white-space:nowrap;
+  }
+  .chip.active{background:var(--primary); color:#fff; border-color:var(--primary);}
+
+  .list{padding:4px 20px 40px; display:flex; flex-direction:column; gap:16px;}
+  .article-card{
+    border:1px solid var(--card-border); border-radius:var(--radius);
+    padding:18px 18px; box-shadow:var(--card-shadow); background:var(--bg);
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .article-card.featured{background:linear-gradient(135deg,#5437a3 0%,#09B8A9 100%); border:none;}
+  .article-card.featured .article-title, .article-card.featured .article-summary, .article-card.featured .date{color:#fff;}
+  .article-card.featured .badge-featured{background:rgba(255,255,255,0.22); color:#fff;}
+
+  .article-meta{display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
+  .badge-featured{background:var(--primary); color:#fff; font-size:10.5px; font-weight:700; padding:4px 11px; border-radius:999px; letter-spacing:0.3px;}
+  .tag{background:var(--primary-badge-bg); color:var(--primary); font-size:11px; font-weight:700; padding:4px 11px; border-radius:999px;}
+  .date{font-size:12px; color:#8a8fa3;}
+
+  .article-title{
+    font-size:16.5px; font-weight:600; color:var(--text-title); text-decoration:none;
+    line-height:1.35; display:inline-flex; align-items:flex-start; gap:6px;
+  }
+  .article-summary{font-size:13px; line-height:1.6;}
+  .read-link{
+    font-size:12.5px; font-weight:600; color:var(--accent); text-decoration:none;
+    display:inline-flex; align-items:center; gap:5px; margin-top:2px;
+  }
+  .article-card.featured .read-link{color:#fff;}
+
+  .cta-banner{
+    margin:0 20px 32px; background:var(--primary-badge-bg); border-radius:16px;
+    padding:26px 22px; display:flex; flex-direction:column; align-items:flex-start; gap:16px;
+  }
+  .cta-banner .icon{
+    width:44px; height:44px; border-radius:12px; background:var(--primary);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .cta-banner p{font-size:15px; color:var(--text-title); font-weight:600; line-height:1.4;}
+  .cta-banner button{
+    width:100%; background:var(--primary); color:#fff; border:none; padding:14px; border-radius:10px;
+    font-size:13.5px; font-weight:700; letter-spacing:0.3px; font-family:'Inter',sans-serif;
+  }
+
+  footer{padding:24px 20px 32px; display:flex; flex-direction:column; align-items:center; gap:14px; border-top:1px solid #f0eefc;}
+  .socials{display:flex; gap:12px;}
+  .socials div{width:34px; height:34px; border-radius:10px; background:var(--bg-soft); border:1px solid var(--card-border); display:flex; align-items:center; justify-content:center;}
+  .footer-text{font-size:12px; color:#8a8fa3; text-align:center;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">FS</div>
+  <div class="burger"><span></span><span></span><span></span></div>
+</header>
+
+<section class="page-head">
+  <h1>Artigos</h1>
+  <p>Aprendizados práticos sobre front-end, Next.js e performance.</p>
+</section>
+
+<section class="toolbar">
+  <div class="search-box">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8a8fa3" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input type="text" placeholder="Buscar artigo...">
+  </div>
+  <div class="chips">
+    <div class="chip active">Todos</div>
+    <div class="chip">Next.js</div>
+    <div class="chip">Micro Front-ends</div>
+    <div class="chip">TypeScript</div>
+    <div class="chip">Performance</div>
+    <div class="chip">CSS Modules</div>
+  </div>
+</section>
+
+<div class="list">
+
+  <div class="article-card featured">
+    <div class="article-meta">
+      <span class="badge-featured">DESTAQUE</span>
+      <span class="date">12 Mar • 8 min</span>
+    </div>
+    <a href="#" class="article-title">Arquitetura de Micro Front-ends com Module Federation e React 19</a>
+    <p class="article-summary">Estruturando aplicações escaláveis com times e deploys independentes.</p>
+    <a href="#" class="read-link">Ler artigo
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
+    </a>
+  </div>
+
+  <div class="article-card">
+    <div class="article-meta">
+      <span class="tag">Next.js</span>
+      <span class="date">28 Fev • 6 min</span>
+    </div>
+    <a href="#" class="article-title">Otimizando Performance no Next.js com Server Components e Streaming
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="2.6" style="flex-shrink:0; margin-top:3px;"><path d="M7 17L17 7M7 7h10v10"/></svg>
+    </a>
+    <p class="article-summary">Combinando Server Components e streaming para reduzir o TTI.</p>
+    <a href="#" class="read-link">Ler artigo
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#09B8A9" stroke-width="2.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
+    </a>
+  </div>
+
+  <div class="article-card">
+    <div class="article-meta">
+      <span class="tag">TypeScript</span>
+      <span class="date">14 Fev • 5 min</span>
+    </div>
+    <a href="#" class="article-title">Gerenciamento de Estado Descomplicado com Zustand
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="2.6" style="flex-shrink:0; margin-top:3px;"><path d="M7 17L17 7M7 7h10v10"/></svg>
+    </a>
+    <p class="article-summary">Por que trocar Redux por uma solução minimalista e previsível.</p>
+    <a href="#" class="read-link">Ler artigo
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#09B8A9" stroke-width="2.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
+    </a>
+  </div>
+
+  <div class="article-card">
+    <div class="article-meta">
+      <span class="tag">Performance</span>
+      <span class="date">30 Jan • 7 min</span>
+    </div>
+    <a href="#" class="article-title">PWA na Prática: Construindo Aplicações Offline-First
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="2.6" style="flex-shrink:0; margin-top:3px;"><path d="M7 17L17 7M7 7h10v10"/></svg>
+    </a>
+    <p class="article-summary">Service workers e cache estratégico para uma experiência confiável.</p>
+    <a href="#" class="read-link">Ler artigo
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#09B8A9" stroke-width="2.6"><path d="M7 17L17 7M7 7h10v10"/></svg>
+    </a>
+  </div>
+
+</div>
+
+<div class="cta-banner">
+  <div class="icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+  </div>
+  <p>Tem um projeto em mente? Vamos transformar sua ideia em realidade.</p>
+  <button>ENTRE EM CONTATO</button>
+</div>
+
+<footer>
+  <div class="socials">
+    <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
+    <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="1.8"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+    <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+  </div>
+  <div class="footer-text">© 2025 Filipe Silveira<br>Feito com ♥ e Next.js</div>
+</footer>
+
+</body>
+</html>

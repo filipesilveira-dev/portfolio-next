@@ -56,6 +56,14 @@ export default function Tech() {
             alt="Logo Next.JS"
           />
           <Image
+            src="/tech_logos/tailwind.png"
+            width={30}
+            height={30}
+            className={style.card}
+            title="Tailwind CSS"
+            alt="Logo Tailwind CSS"
+          />
+          <Image
             src="/tech_logos/git.png"
             width={30}
             height={30}
@@ -121,6 +129,14 @@ export default function Tech() {
             className={style.card}
             title="Next Js"
             alt="Logo Next.JS"
+          />
+          <Image
+            src="/tech_logos/tailwind.png"
+            width={30}
+            height={30}
+            className={style.card}
+            title="Tailwind CSS"
+            alt="Logo Tailwind CSS"
           />
           <Image
             src="/tech_logos/git.png"

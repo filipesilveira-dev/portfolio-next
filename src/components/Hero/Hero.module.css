@@ -1,5 +1,7 @@
 .hero{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .img_wrapper {
@@ -17,5 +19,12 @@
 @media (min-width: 576px) {
   .hero{
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px){
+  .hero{
+    margin: auto;
+    width: 80%;
   }
 }

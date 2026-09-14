@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Contato — Mobile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#5437a3; --primary-badge-bg:#eee9fe; --accent:#09B8A9;
+    --bg:#ffffff; --bg-soft:#fbfbfe; --text-title:#111827; --text-body:#4b5563;
+    --card-border:rgba(84,55,163,0.12); --card-shadow:0 2px 8px rgba(0,0,0,0.06); --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{width:375px; font-family:'Inter',sans-serif; color:var(--text-body); background:var(--bg);}
+  h1,.brand{font-family:'Space Grotesk',sans-serif;}
+
+  header{display:flex; align-items:center; justify-content:space-between; padding:18px 20px; border-bottom:1px solid #f0eefc;}
+  .brand{font-size:20px; font-weight:700; color:var(--accent);}
+  .burger{display:flex; flex-direction:column; gap:4px;}
+  .burger span{width:22px; height:2px; background:var(--primary); border-radius:2px;}
+
+  .page-head{padding:28px 20px 18px;}
+  .page-head h1{font-size:26px; color:var(--text-title); font-weight:700; margin-bottom:8px;}
+  .page-head p{font-size:14px; line-height:1.55;}
+
+  .status-badge{
+    margin:0 20px 18px; display:inline-flex; align-items:center; gap:8px; padding:9px 16px; border-radius:999px;
+    background:#eafcf5; width:fit-content; font-size:12.5px; font-weight:600; color:#0a8c6b;
+  }
+  .status-dot{width:7px; height:7px; border-radius:50%; background:#12c98e;}
+
+  .quick-actions{display:flex; gap:10px; padding:0 20px 26px; overflow-x:auto;}
+  .quick-chip{
+    flex-shrink:0; display:flex; align-items:center; gap:8px; padding:10px 16px;
+    border-radius:999px; border:1px solid var(--card-border); background:var(--bg-soft);
+    font-size:13px; font-weight:600; color:var(--text-title); white-space:nowrap;
+  }
+
+  .form-card{
+    margin:0 20px 24px; background:var(--bg); border:1px solid var(--card-border); border-radius:var(--radius);
+    box-shadow:var(--card-shadow); padding:24px 20px;
+  }
+  .field{margin-bottom:18px; display:flex; flex-direction:column; gap:7px;}
+  .field label{font-size:13px; font-weight:600; color:var(--text-title);}
+  .field input, .field select, .field textarea{
+    border:1px solid var(--card-border); border-radius:10px; padding:0 14px; height:48px; font-size:14px;
+    font-family:'Inter',sans-serif; color:var(--text-title); background:var(--bg-soft); outline:none; width:100%;
+  }
+  .field textarea{padding:12px 14px; height:110px; resize:none; line-height:1.5;}
+  .submit-btn{
+    width:100%; background:var(--primary); color:#fff; border:none; height:50px; border-radius:10px;
+    font-size:14.5px; font-weight:700; display:flex; align-items:center; justify-content:center; gap:10px;
+    font-family:'Inter',sans-serif;
+  }
+
+  .contacts-section{padding:0 20px 24px; display:flex; flex-direction:column; gap:12px;}
+  .contact-card{
+    border:1px solid var(--card-border); border-radius:12px; padding:14px 16px;
+    display:flex; align-items:center; gap:12px; box-shadow:var(--card-shadow); background:var(--bg-soft);
+  }
+  .icon-box{width:38px; height:38px; border-radius:10px; background:var(--primary-badge-bg); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .contact-card .label{font-size:11.5px; color:#8a8fa3; margin-bottom:2px;}
+  .contact-card .value{font-size:13.5px; font-weight:600; color:var(--text-title);}
+
+  .cta-banner{
+    margin:0 20px 32px; background:var(--primary-badge-bg); border-radius:16px;
+    padding:26px 22px; display:flex; flex-direction:column; align-items:flex-start; gap:16px;
+  }
+  .cta-banner .icon{width:44px; height:44px; border-radius:12px; background:var(--primary); display:flex; align-items:center; justify-content:center;}
+  .cta-banner p{font-size:15px; color:var(--text-title); font-weight:600; line-height:1.4;}
+  .cta-banner button{width:100%; background:var(--primary); color:#fff; border:none; padding:14px; border-radius:10px; font-size:13.5px; font-weight:700; font-family:'Inter',sans-serif;}
+
+  footer{padding:24px 20px 32px; display:flex; flex-direction:column; align-items:center; gap:14px; border-top:1px solid #f0eefc;}
+  .socials{display:flex; gap:12px;}
+  .socials div{width:34px; height:34px; border-radius:10px; background:var(--bg-soft); border:1px solid var(--card-border); display:flex; align-items:center; justify-content:center;}
+  .footer-text{font-size:12px; color:#8a8fa3; text-align:center;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">FS</div>
+  <div class="burger"><span></span><span></span><span></span></div>
+</header>
+
+<section class="page-head">
+  <h1>Contato</h1>
+  <p>Preencha o formulário ou use um dos canais diretos abaixo.</p>
+</section>
+
+<div class="status-badge"><span class="status-dot"></span>Disponível para novos projetos</div>
+
+<div class="quick-actions">
+  <div class="quick-chip">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+    E-mail
+  </div>
+  <div class="quick-chip">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    LinkedIn
+  </div>
+  <div class="quick-chip">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+    WhatsApp
+  </div>
+</div>
+
+<div class="form-card">
+  <div class="field">
+    <label>Seu Nome</label>
+    <input type="text" placeholder="Ex: Maria Silva">
+  </div>
+  <div class="field">
+    <label>Seu E-mail</label>
+    <input type="email" placeholder="Ex: maria@email.com">
+  </div>
+  <div class="field">
+    <label>Assunto</label>
+    <select>
+      <option>Proposta de Projeto</option>
+      <option>Oportunidade de Trabalho</option>
+      <option>Dúvida/Outro</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>Sua Mensagem</label>
+    <textarea placeholder="Descreva os detalhes da sua ideia ou oportunidade..."></textarea>
+  </div>
+  <button class="submit-btn">
+    Enviar Mensagem
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+  </button>
+</div>
+
+<div class="contacts-section">
+  <div class="contact-card">
+    <div class="icon-box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+    <div><div class="label">Localização</div><div class="value">Brasil • Trabalho Remoto</div></div>
+  </div>
+  <div class="contact-card">
+    <div class="icon-box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
+    <div><div class="label">GitHub</div><div class="value">github.com/filipesilveira</div></div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <div class="icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+  </div>
+  <p>Tem um projeto em mente? Vamos transformar sua ideia em realidade.</p>
+  <button>ENTRE EM CONTATO</button>
+</div>
+
+<footer>
+  <div class="socials">
+    <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
+    <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="1.8"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+    <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5437a3" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+  </div>
+  <div class="footer-text">© 2025 Filipe Silveira<br>Feito com ♥ e Next.js</div>
+</footer>
+
+</body>
+</html>

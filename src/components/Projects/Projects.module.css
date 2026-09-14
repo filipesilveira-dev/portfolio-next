@@ -145,7 +145,7 @@
 
 @media (min-width: 1200px) {
     .projects_section{
-        width: 90%;
+        width: 80%;
     }
   .dot:nth-child(n + 3) {
     display: none;
