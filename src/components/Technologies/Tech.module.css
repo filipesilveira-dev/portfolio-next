@@ -59,3 +59,11 @@
     translate: -100%;
   }
 }
+
+@media (min-width: 1200px) {
+    .tech_container{
+        width: 90%;
+        margin: auto;
+    }
+  }
+

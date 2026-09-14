@@ -1,46 +1,196 @@
-.projects_section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 1.5rem auto;
+.projects_section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1360px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
 }
 
-.projets_section_title_wrapper{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
+.projets_section_title_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
-.projects_section h2{
-    align-self: flex-start;
-    margin: 1rem 1.5rem;
+.projects_section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #171717;
+  margin: 0;
 }
 
-.projects_link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .25rem;
-    color: #5437a3;
-    font-weight: 600;
+.projects_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #5437a3;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.project_container{
-    display: flex;
-    gap: .75rem;
-    max-width: 25rem;
-    width: 100%;
-
-    padding: 2rem;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    scroll-padding: 2rem;
+.projects_link:hover {
+  opacity: 0.8;
+  transform: translateX(2px);
 }
 
-@media (min-width: 420px){
-    .projets_section_title_wrapper{
-        flex-direction: row;
+.slider_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  padding: 0.5rem 0.25rem 1rem 0.25rem;
+}
+
+.swiper_slide {
+  height: auto;
+  display: flex;
+}
+
+/* Setas de navegação */
+.arrow_btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #5437a3;
+  border: 1px solid rgba(84, 55, 163, 0.18);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.arrow_btn:hover {
+  background-color: #5437a3;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 18px rgba(84, 55, 163, 0.25);
+}
+
+.arrow_btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.arrow_prev {
+  left: -18px;
+}
+
+.arrow_next {
+  right: -18px;
+}
+
+/* Bolinhas de navegação */
+.dots_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #eee9fe;
+  border: 1.5px solid #5437a3;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.65;
+}
+
+.dot:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Cor da bolinha ativada idêntica à cor da fonte do texto contido em "tech" (#5437a3) */
+.dot_active {
+  background-color: #5437a3;
+  border-color: #5437a3;
+  width: 26px;
+  border-radius: 9999px;
+  opacity: 1;
+}
+
+/* Responsividade dos dots: oculta dots excedentes conforme a quantidade de cards visíveis */
+@media (min-width: 576px) {
+  .dot:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .dot:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+    .projects_section{
+        width: 90%;
     }
+  .dot:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects_section {
+    padding: 0 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .arrow_prev {
+    left: -8px;
+  }
+
+  .arrow_next {
+    right: -8px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .projects_section h2 {
+    color: #f4f4f5;
+  }
+
+  .arrow_btn {
+    background-color: #27272a;
+    color: #a78bfa;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
+
+  .arrow_btn:hover {
+    background-color: #5437a3;
+    color: #ffffff;
+  }
+
+  .dot {
+    background-color: rgba(84, 55, 163, 0.3);
+    border-color: #7c5ceb;
+  }
+
+  .dot_active {
+    background-color: #5437a3;
+    border-color: #5437a3;
+  }
 }

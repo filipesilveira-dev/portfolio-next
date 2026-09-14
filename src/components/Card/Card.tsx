@@ -11,26 +11,24 @@ interface CardProps {
 
 export default function Card({ img, name, resume, tech }: CardProps) {
   return (
-    <>
-      <Link href="/projects" className={style.link_wrapper}>
+    <Link href="/projects" className={style.link_wrapper}>
+      <div className={style.card_img_wrapper}>
         <Image
           className={style.card_img}
           src={img}
-          width={135}
-          height={90}
-          alt="Miniatura do projeto"
+          alt={`Miniatura do projeto ${name}`}
           unoptimized
         />
-        <div className={style.project_info_container}>
-          <h3>{name}</h3>
-          <p>{resume}</p>
-          <div className={style.span_wrapper}>
-            {tech.map((t) => (
-              <span key={t}>{t}</span>
-            ))}
-          </div>
+      </div>
+      <div className={style.project_info_container}>
+        <h3 className={style.project_title}>{name}</h3>
+        <p className={style.project_resume}>{resume}</p>
+        <div className={style.span_wrapper}>
+          {tech.map((t) => (
+            <span key={t}>{t}</span>
+          ))}
         </div>
-      </Link>
-    </>
+      </div>
+    </Link>
   );
 }
