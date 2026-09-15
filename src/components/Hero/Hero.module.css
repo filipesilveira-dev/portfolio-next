@@ -3,11 +3,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: white;
 }
 .img_wrapper {
   position: relative; /* Obrigatório ao usar fill no Next Image */
   width: 100%;        /* Faz o container ocupar toda a largura disponível */
-  height: 20rem;     /* Altura fixa ou você pode usar aspect-ratio */
+  /* height: 20rem;      */
+  aspect-ratio: 16/9;
 }
 
 /* Mantém as proporções da imagem sem distorcer dentro do container */
@@ -25,6 +27,7 @@
 @media (min-width: 1200px){
   .hero{
     margin: auto;
+    /* padding-top: 1rem; */
     width: 80%;
   }
 }

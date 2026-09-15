@@ -63,7 +63,7 @@
 @media (min-width: 1200px) {
     .tech_container{
         width: 80%;
-        margin: auto;
+        margin: 1.5rem auto;
     }
 
     .carousel{

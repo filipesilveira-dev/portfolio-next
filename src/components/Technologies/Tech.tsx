@@ -24,6 +24,14 @@ export default function Tech() {
             alt="Logo CSS"
           />
           <Image
+            src="/tech_logos/tailwind.png"
+            width={30}
+            height={30}
+            className={style.card}
+            title="Tailwind CSS"
+            alt="Logo Tailwind CSS"
+          />
+          <Image
             src="/tech_logos/js.png"
             width={30}
             height={30}
@@ -48,6 +56,14 @@ export default function Tech() {
             alt="Logo React"
           />
           <Image
+            src="/tech_logos/motion.png"
+            width={30}
+            height={30}
+            className={style.card}
+            title="Motion"
+            alt="Logo Motion"
+          />
+          <Image
             src="/tech_logos/next.js.png"
             width={30}
             height={30}
@@ -56,12 +72,12 @@ export default function Tech() {
             alt="Logo Next.JS"
           />
           <Image
-            src="/tech_logos/tailwind.png"
+            src="/tech_logos/vercel.png"
             width={30}
             height={30}
             className={style.card}
-            title="Tailwind CSS"
-            alt="Logo Tailwind CSS"
+            title="Vercel"
+            alt="Logo Vercel"
           />
           <Image
             src="/tech_logos/git.png"
@@ -99,6 +115,14 @@ export default function Tech() {
             alt="Logo CSS"
           />
           <Image
+            src="/tech_logos/tailwind.png"
+            width={30}
+            height={30}
+            className={style.card}
+            title="Tailwind CSS"
+            alt="Logo Tailwind CSS"
+          />
+          <Image
             src="/tech_logos/js.png"
             width={30}
             height={30}
@@ -123,6 +147,14 @@ export default function Tech() {
             alt="Logo React"
           />
           <Image
+            src="/tech_logos/motion.png"
+            width={30}
+            height={30}
+            className={style.card}
+            title="Motion"
+            alt="Logo Motion"
+          />
+          <Image
             src="/tech_logos/next.js.png"
             width={30}
             height={30}
@@ -131,12 +163,12 @@ export default function Tech() {
             alt="Logo Next.JS"
           />
           <Image
-            src="/tech_logos/tailwind.png"
+            src="/tech_logos/vercel.png"
             width={30}
             height={30}
             className={style.card}
-            title="Tailwind CSS"
-            alt="Logo Tailwind CSS"
+            title="Vercel"
+            alt="Logo Vercel"
           />
           <Image
             src="/tech_logos/git.png"
