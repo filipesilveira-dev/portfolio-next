@@ -40,6 +40,14 @@ export default function Tech() {
             alt="Logo JavaScript"
           />
           <Image
+            src="/tech_logos/typescript.png"
+            width={30}
+            height={30}
+            className={style.card}
+            title="TypeScript"
+            alt="Logo TypeScript"
+          />
+          <Image
             src="/tech_logos/nodejs.png"
             width={30}
             height={30}
@@ -129,6 +137,14 @@ export default function Tech() {
             className={style.card}
             title="JavaScript"
             alt="Logo JavaScript"
+          />
+          <Image
+            src="/tech_logos/typescript.png"
+            width={30}
+            height={30}
+            className={style.card}
+            title="TypeScript"
+            alt="Logo TypeScript"
           />
           <Image
             src="/tech_logos/nodejs.png"
