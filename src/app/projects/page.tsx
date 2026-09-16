@@ -21,19 +21,23 @@ export default function Projects() {
           front-end.
         </p>
       </div>
-      <h3 className={style.title_main_projects}>Principais Projetos</h3>
 
-      <div className={style.cards}>
-        {projects.map((project) => (
-          <Card
-            key={project.id}
-            img={project.img}
-            name={project.name}
-            resume={project.resume}
-            tech={project.tech}
-          />
-        ))}
+      <h3 className={style.title_main_projects}>Principais Projetos</h3>
+      <div className={style.main_projects_section}>
+        <div className={style.cards}>
+          {projects.map((project) => (
+            <div className={style.card} key={project.id}>
+              <Card
+                img={project.img}
+                name={project.name}
+                resume={project.resume}
+                tech={project.tech}
+              />
+            </div>
+          ))}
+        </div>
       </div>
+
       <AnimatePresence>
         {isMoreProjects && (
           <motion.div
@@ -44,7 +48,7 @@ export default function Projects() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <>
-            <h3 className={style.title_main_projects}>Mais Projetos</h3>
+              <h3 className={style.title_main_projects}>Mais Projetos</h3>
               <div className={style.empty_state}>
                 <EmptySytate />
               </div>

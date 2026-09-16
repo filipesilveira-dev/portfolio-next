@@ -24,6 +24,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Necessário por conta do "position: fixed" do header */
+  padding-top: 4rem
 }
 
 * {
