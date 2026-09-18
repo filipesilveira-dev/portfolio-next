@@ -1,0 +1,154 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 1rem;
+  gap: 0.5rem;
+  background-color: #f7f7fc;
+}
+
+.hero img {
+  padding: 0.15rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.288);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+}
+
+.image_label_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.image_label_wrapper span {
+  background-color: #e5f4f5;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.hero button {
+  background-color: #5440c3;
+  color: #f7f8fb;
+  border: none;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.hero button:hover {
+  background-color: #555ed693;
+  cursor: pointer;
+  border: 1px solid #555ed6;
+}
+
+.hero_paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+.hero_span_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: 100%;
+  margin: 0 auto 1rem;
+  padding-inline: 0.5rem;
+  gap: 0.5rem;
+}
+
+.hero_span_list span {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 1px 14px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem;
+}
+
+.prefessional_background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: auto;
+}
+
+.prefessional_background h3 {
+  margin: 1rem;
+}
+
+.prefessional_background img {
+  width: 25%;
+}
+.prefessional_background_item {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem 0.5rem;
+  width: 90%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  border-radius: 10px;
+  box-shadow: 0 1px 14px rgba(0, 0, 0, 0.12);
+  gap: 1rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+.prefessional_background_item img {
+  border-radius: 50%;
+  padding: 0.25rem;
+  color: black;
+  background-color: #09b8aa69;
+  width: 40px;
+  height: 40px;
+}
+.background_item_text_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.background_item_text_wrapper span {
+  font-size: 0.75rem;
+}
+
+.linha_tracejada_vertical_container_pai{
+ position: relative;
+ display: flex;
+ justify-content: center;
+}
+
+.linha_tracejada_vertical_container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 0px;
+  position: absolute;
+  z-index: 0; /* Fica atrás dos cards */
+  
+}
+
+.linha_tracejada_vertical {
+  width: 50vw;
+  border-left: 3px dashed #09b8a9;
+  padding: 0;
+  margin: 0;
+  height: 33px;
+  
+}

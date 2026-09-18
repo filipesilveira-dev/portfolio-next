@@ -6,6 +6,7 @@ import style from "./Header.module.css";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { usePathname } from "next/navigation";
 
 type NavLinkId =
   "home" | "about" | "projects" | "skills" | "articles" | "contact";
@@ -17,15 +18,16 @@ interface NavItem {
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isActive, setIsActive] = useState<NavLinkId>("home");
+  // Hook Next js que permite ler a URL. Ou seja, sempre que ela mudar, o Next.js re-renderiza na navbar
+  const pathName = usePathname();
 
   const navItems: NavItem[] = [
-    { id: "home", label: "Início", path:"" },
-    { id: "about", label: "Sobre", path:"about" },
-    { id: "projects", label: "Projetos", path:"projects" },
-    { id: "skills", label: "Habilidades", path:"skills" },
-    { id: "articles", label: "Artigos", path:"articles" },
-    { id: "contact", label: "Contato", path:"contact" },
+    { id: "home", label: "Início", path: "/" },
+    { id: "about", label: "Sobre", path: "/about" },
+    { id: "projects", label: "Projetos", path: "/projects" },
+    { id: "skills", label: "Habilidades", path: "/skills" },
+    { id: "articles", label: "Artigos", path: "/articles" },
+    { id: "contact", label: "Contato", path: "/contact" },
   ];
 
   return (
@@ -35,38 +37,22 @@ export function Header() {
           <Image src="/logo.svg" alt="Imagem da logo" width={40} height={40} />
         </Link>
 
+        {/* NavBar criada com map() em "navItems" */}
         <nav className={style.nav_bar}>
           <ul className={style.nav_bar_list}>
-            {navItems.map((item) => (
-              <Link
-                key={item.id}
-                href={`/${item.path}`}
-                className={`${style.nav_bar_item} ${isActive === item.id ? style.active: ""}`}
-                onClick={() => setIsActive(item.id)}
-              >
-                {item.label}
-              </Link>
-            ))}
-
-
-            {/* <Link href="/" className={style.nav_bar_item}>
-              Início
-            </Link>
-            <Link href="/projects" className={style.nav_bar_item}>
-              Projetos
-            </Link>
-            <Link href="/about" className={style.nav_bar_item}>
-              Sobre
-            </Link>
-            <Link href="/skills" className={style.nav_bar_item}>
-              Habilidades
-            </Link>
-            <Link href="/articles" className={style.nav_bar_item}>
-              Artigos
-            </Link>
-            <Link href="/contact" className={style.nav_bar_item}>
-              Contato
-            </Link> */}
+            {navItems.map((item) => {
+              // Caso pathName seja igual ao path do Link da lista, "isActive" é true
+              const isActive = pathName === item.path;
+              return (
+                <Link
+                  key={item.id}
+                  href={`${item.path}`}
+                  className={`${style.nav_bar_item} ${isActive ? style.active : ""}`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </ul>
         </nav>
 
@@ -82,13 +68,13 @@ export function Header() {
               height={24}
             />
           </button>
-          <Image
+          {/* <Image
             src="/moon.svg"
             alt="Imagem de lua"
             width={36}
             height={36}
             className={style.toggle_symbol}
-          />
+          /> */}
         </div>
       </section>
 
