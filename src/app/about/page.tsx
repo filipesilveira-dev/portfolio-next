@@ -24,9 +24,8 @@ export default function About() {
       </div>
       <div className={style.hero_paragraph}>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-          inventore minima dolore tempora nam reprehenderit omnis beatae porro
-          magnam.
+          Desenvolvedor Front-end | React | Next.js | TypeScript | JavaScript |
+          HTML5 | CSS3 | Construindo interfaces web e soluções práticas
         </p>
       </div>
       <div className={style.hero_span_list}>
@@ -65,14 +64,15 @@ export default function About() {
         {/* Desenvolvedor Front-end */}
         <div className={style.prefessional_background_item}>
           <Image
-            src="/idea.svg"
+            src="/academy.svg"
             alt="Imagem de capelo"
             width={40}
             height={40}
           />
           <div className={style.background_item_text_wrapper}>
             <h4>Desenvolvedor Front-end</h4>
-            <span>Finalização do curso</span>
+            <span>Agosto/2026</span>
+            <span>Carga horária: 37hs</span>
           </div>
         </div>
 
@@ -92,10 +92,9 @@ export default function About() {
             height={40}
           />
           <div className={style.background_item_text_wrapper}>
-            <h4>Bootcamp 2</h4>
-            <span>Data de início</span>
-            <span>Previsão de término</span>
-            <span>Desenvolvedor Back-end - em andamento</span>
+            <h4>Bootcamp Santander - 2026 AI React Fron-end (DIO)</h4>
+            <span>Julho/2026</span>
+            <span>Carga horária: 42hs</span>
           </div>
         </div>
 
@@ -115,10 +114,9 @@ export default function About() {
             height={40}
           />
           <div className={style.background_item_text_wrapper}>
-            <h4>Análise e desenvolvimento de sistemas</h4>
-            <span>Data de início</span>
-            <span>Previsão de término</span>
-            <span>Desenvolvedor Back-end - em andamento</span>
+            <h4>Análise e desenvolvimento de sistemas (Estácio)</h4>
+            <span>Início: Agosto/2025</span>
+            <span>Término: Janeiro/2028 (previsão)</span>
           </div>
         </div>
 
@@ -138,10 +136,9 @@ export default function About() {
             height={40}
           />
           <div className={style.background_item_text_wrapper}>
-            <h4>Bootcamp 1</h4>
-            <span>Data de início</span>
-            <span>Previsão de término</span>
-            <span>Desenvolvedor Back-end - em andamento</span>
+            <h4>Bootcamp Santander 2025 - Front-end (DIO)</h4>
+            <span>Agosto/2025</span>
+            <span>Carga horária: 102hs</span>
           </div>
         </div>
 
@@ -155,16 +152,15 @@ export default function About() {
         {/* EBAC */}
         <div className={style.prefessional_background_item}>
           <Image
-            src="/academy.svg"
+            src="/study.svg"
             alt="Imagem de capelo"
             width={40}
             height={40}
           />
           <div className={style.background_item_text_wrapper}>
-            <h4>EBAC</h4>
-            <span>Nome do curso 1</span>
-            <span>Desenvolvedor Front-end</span>
-            <span>Desenvolvedor Back-end - em andamento</span>
+            <h4>Profissão: TI do Zero ao Pro (EBAC)</h4>
+            <span>Março/2025</span>
+            <span>Carga horária: 10hs</span>
           </div>
         </div>
 
@@ -175,7 +171,76 @@ export default function About() {
           </div>
         </div>
 
-        {/* Csada de Cultura Britânica */}
+        {/* EBAC */}
+        <div className={style.prefessional_background_item}>
+          <Image
+            src="/study.svg"
+            alt="Imagem de capelo"
+            width={40}
+            height={40}
+          />
+          <div className={style.background_item_text_wrapper}>
+            <h4>Introdução à Programação (EBAC)</h4>
+            <span>Fevereiro/2025</span>
+            <span>Carga horária: 18hs</span>
+          </div>
+        </div>
+
+        {/* Linha tracejada */}
+        <div className={style.linha_tracejada_vertical_container_pai}>
+          <div className={style.linha_tracejada_vertical_container}>
+            <div className={style.linha_tracejada_vertical}></div>
+          </div>
+        </div>
+
+        {/* Alura */}
+        <div className={style.prefessional_background_item}>
+          <Image
+            src="/study.svg"
+            alt="Imagem de capelo"
+            width={40}
+            height={40}
+          />
+          <div className={style.background_item_text_wrapper}>
+            <h4>Imersão Front-end 2ª edição (Alura)</h4>
+            <span>Fevereiro/2025</span>
+            <span>Carga horária: 5hs</span>
+          </div>
+        </div>
+
+        {/* Linha tracejada */}
+        <div className={style.linha_tracejada_vertical_container_pai}>
+          <div className={style.linha_tracejada_vertical_container}>
+            <div className={style.linha_tracejada_vertical}></div>
+          </div>
+        </div>
+
+        {/* Alura */}
+        <div className={style.prefessional_background_item}>
+          <Image
+            src="/study.svg"
+            alt="Imagem de capelo"
+            width={40}
+            height={40}
+          />
+          <div className={style.background_item_text_wrapper}>
+            <h4>HTML e CSS (Alura)</h4>
+            <span>Janeiro/2025</span>
+            <span>Carga horária: 8hs</span>
+            <span>
+              Ambientes de desenvolvimento, estrutura de arquivos e tags
+            </span>
+          </div>
+        </div>
+
+        {/* Linha tracejada */}
+        <div className={style.linha_tracejada_vertical_container_pai}>
+          <div className={style.linha_tracejada_vertical_container}>
+            <div className={style.linha_tracejada_vertical}></div>
+          </div>
+        </div>
+
+        {/* Casa de Cultura Britânica */}
         <div className={style.prefessional_background_item}>
           <Image
             src="/language.svg"
@@ -184,10 +249,9 @@ export default function About() {
             height={40}
           />
           <div className={style.background_item_text_wrapper}>
-            <h4>Casa de cultura britânica</h4>
-            <span>Proeficiência</span>
-            <span>soft skills</span>
-            <span>Desenvolvedor Back-end - em andamento</span>
+            <h4>Casa de Cultura Britânica</h4>
+            <span>Dezembro/2018</span>
+            <span>Inglês Intermediário (B1)</span>
           </div>
         </div>
 
@@ -205,18 +269,103 @@ export default function About() {
                 <h2 className={style.title_main_projects}>
                   Minha bagagem na Psicologia
                 </h2>
+
                 <div className={style.prefessional_background_item}>
                   <Image
-                    src="/language.svg"
+                    src="/work.svg"
                     alt="Imagem de capelo"
                     width={40}
                     height={40}
                   />
                   <div className={style.background_item_text_wrapper}>
-                    <h4>Casa de cultura britênica</h4>
-                    <span>Tempo de experiência</span>
-                    <span>soft skills</span>
-                    <span>Desenvolvedor Back-end - em andamento</span>
+                    <h4>Psicólogo Clínico Autônomo</h4>
+                    <span>Início: agosto/2017</span>
+                    <span>Fim: até o momento</span>
+                    <span>
+                      <strong>Soft skills:</strong> visão de negócios, autogestão,
+                      comprometimento, capacidade analítica, resolubilidade,
+                      comunicação e empatia
+                    </span>
+                  </div>
+                </div>
+
+                {/* Linha tracejada */}
+                <div className={style.linha_tracejada_vertical_container_pai}>
+                  <div className={style.linha_tracejada_vertical_container}>
+                    <div className={style.linha_tracejada_vertical}></div>
+                  </div>
+                </div>
+
+                <div className={style.prefessional_background_item}>
+                  <Image
+                    src="/work.svg"
+                    alt="Imagem de capelo"
+                    width={40}
+                    height={40}
+                  />
+                  <div className={style.background_item_text_wrapper}>
+                    <h4>
+                      Psicólogo Hospitalar em Hospital Leonardo da Vinci (HELV)
+                    </h4>
+                    <span>Início: março/2023</span>
+                    <span>Fim: janeiro/2025</span>
+                    <span>
+                      <strong>Soft skills:</strong> comprometimento, capacidade
+                      analítica, resolubilidade, comunicação e empatia
+                    </span>
+                  </div>
+                </div>
+
+                {/* Linha tracejada */}
+                <div className={style.linha_tracejada_vertical_container_pai}>
+                  <div className={style.linha_tracejada_vertical_container}>
+                    <div className={style.linha_tracejada_vertical}></div>
+                  </div>
+                </div>
+
+                <div className={style.prefessional_background_item}>
+                  <Image
+                    src="/work.svg"
+                    alt="Imagem de capelo"
+                    width={40}
+                    height={40}
+                  />
+                  <div className={style.background_item_text_wrapper}>
+                    <h4>
+                      Psicólogo da Saúde em Secretaria Municipal de Fortaleza
+                    </h4>
+                    <span>Início: março/2020</span>
+                    <span>Fim: março/2022</span>
+                    <span>
+                      <strong>Soft skills: </strong>comprometimento, capacidade
+                      analítica, resolubilidade, comunicação e empatia
+                    </span>
+                  </div>
+                </div>
+
+                {/* Linha tracejada */}
+                <div className={style.linha_tracejada_vertical_container_pai}>
+                  <div className={style.linha_tracejada_vertical_container}>
+                    <div className={style.linha_tracejada_vertical}></div>
+                  </div>
+                </div>
+
+                {/* Estágio */}
+                <div className={style.prefessional_background_item}>
+                  <Image
+                    src="/work.svg"
+                    alt="Imagem de capelo"
+                    width={40}
+                    height={40}
+                  />
+                  <div className={style.background_item_text_wrapper}>
+                    <h4>Estágio em Psicologia (COGEP)</h4>
+                    <span>Início: setembro/2014</span>
+                    <span>Fim: fevereiro/2016</span>
+                    <span>
+                      <strong>Soft skills:</strong> resolubilidade, comunicação
+                      e empatia
+                    </span>
                   </div>
                 </div>
 
@@ -235,10 +384,9 @@ export default function About() {
                     height={40}
                   />
                   <div className={style.background_item_text_wrapper}>
-                    <h4>Psicologia</h4>
-                    <span>Tempo de experiência</span>
-                    <span>soft skills</span>
-                    <span>Desenvolvedor Back-end - em andamento</span>
+                    <h4>Bacharelado em Psicologia</h4>
+                    <span>Início: agosto/2011</span>
+                    <span>Fim: março/2017</span>
                   </div>
                 </div>
               </div>
