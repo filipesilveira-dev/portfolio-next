@@ -39,7 +39,7 @@ export default function About() {
               </p>
               <div className={style.long_resume}>
                 <h2>
-                  Olá, eu sou o <span>Filipe P. Silveira</span>
+                  Olá, eu sou o <span>Filipe P. Silveira</span>!
                 </h2>
                 <p>
                   Curso <strong>Análise e Desenvolvimento de Sistemas</strong> e
@@ -147,7 +147,7 @@ export default function About() {
                   height={40}
                 />
                 <div className={style.background_item_text_wrapper}>
-                  <h4>Desenvolvedor Front-end</h4>
+                  <h4>Desenvolvedor Front-end (EBAC)</h4>
                   <span>Agosto/2026</span>
                   <span>Carga horária: 37hs</span>
                 </div>
