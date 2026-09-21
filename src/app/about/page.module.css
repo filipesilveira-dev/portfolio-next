@@ -56,6 +56,26 @@
   margin: 0.5rem 0.5rem 1rem 0.5rem;
 }
 
+.about_container {
+  width: 100%;
+}
+
+.long_resume {
+  display: none;
+}
+
+.see_more_btn {
+  display: none;
+}
+
+.bio_expanded_content {
+  overflow: hidden;
+}
+
+.timeline_dot {
+  display: none;
+}
+
 .hero_span_list {
   display: flex;
   flex-direction: row;
@@ -79,27 +99,41 @@
   height: auto;
 }
 
-.prefessional_background {
+.professional_background_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.professional_background {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
 }
 
-.prefessional_background h3 {
+.professional_background h3,
+.section_title {
   margin: 1rem;
+  text-align: center;
 }
 
-.prefessional_background img {
-  width: 25%;
+.section_title span {
+  color: #09b8a9;
 }
-.prefessional_background_item {
+
+.psychology_list_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.professional_background_item {
   display: flex;
   align-items: center;
   margin: 1rem auto;
   padding: 1rem 0.5rem;
   width: 90%;
-  max-width: 16rem;
+  max-width: 15rem;
   height: auto;
   border: 1px solid rgba(0, 0, 0, 0.137);
   border-radius: 10px;
@@ -110,7 +144,7 @@
   z-index: 1;
 }
 
-.prefessional_background_item img {
+.professional_background_item img {
   border-radius: 50%;
   padding: 0.25rem;
   color: black;
@@ -171,7 +205,392 @@
   text-decoration: underline;
 }
 
-.more_study_container h2{
+.more_study_container h2 {
   margin: 1rem;
   font-size: 1.15rem;
+}
+
+@media (min-width: 768px) {
+  .about_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Coluna Esquerda: Barra lateral fixa colada ao topo e à margem esquerda */
+  .hero_container {
+    width: 275px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 4rem; /* Colada no topo logo abaixo do header fixo (height: 4rem) */
+    left: 0; /* Colada na margem esquerda da tela */
+    height: calc(100vh - 4rem); /* Ocupa exatamente a altura disponível */
+    background-color: #fdfdfd;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02);
+    padding: 1.15rem 0.85rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hero_container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero {
+    background-color: transparent;
+    padding-top: 0;
+    width: 100%;
+    gap: 0.3rem;
+  }
+
+  .hero img {
+    width: 78px;
+    height: 78px;
+    padding: 0.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .image_label_wrapper {
+    margin-bottom: 0.3rem;
+  }
+
+  .image_label_wrapper h3 {
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .image_label_wrapper span {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.68rem;
+    border-radius: 6px;
+  }
+
+  .hero button {
+    width: 100%;
+    max-width: 160px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .hero_text_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero_paragraph {
+    margin: 0.2rem 0;
+    width: 100%;
+  }
+
+  .short_resume {
+    display: none;
+  }
+
+  .long_resume {
+    display: block;
+    text-align: justify;
+    font-size: 0.76rem;
+    line-height: 1.45;
+    color: #333333;
+    margin: 0.2rem 0;
+  }
+
+  .long_resume h2 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    text-align: left;
+    color: #1a1a1a;
+  }
+
+  .long_resume span {
+    color: #09b8a9;
+  }
+
+  .long_resume p {
+    margin-bottom: 0.35rem;
+  }
+
+  .bio_expanded_content {
+    overflow: hidden;
+  }
+
+  .see_more_btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #5440c3;
+    font-weight: 700;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-top: 0.1rem;
+    margin-bottom: 0.3rem;
+    padding: 0;
+    transition: color 0.2s ease;
+  }
+
+  .see_more_btn:hover {
+    color: #3e2fa8;
+    text-decoration: underline;
+  }
+
+  .hero_span_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .hero_span_list span {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    background-color: #f7f7fc;
+  }
+
+  /* Coluna Direita: Minha Trajetória com rolagem */
+  .trajectory_title_wrapper {
+    width: 100%;
+    background-color: #f6f5f9;
+    padding: 1rem;
+    /* margin-bottom: 0.75rem; */
+    border-bottom: 1px solid rgba(84, 55, 163, 0.08);
+    /* padding: 2rem 1.75rem 0rem 2rem; */
+  }
+
+  .professional_background_wrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+
+    max-width: 960px;
+  }
+
+  .professional_background {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 2rem 1.75rem 0rem 2rem;
+    /* max-width: 960px; */
+  }
+
+  .section_title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    /* margin: 0 0 1.25rem 0; */
+    color: #1e1e2d;
+    /* padding-left: 0; */
+    padding-top: 1rem;
+    text-align: left;
+  }
+
+  .section_title span {
+    color: #09b8a9;
+  }
+
+  /* Esconder linhas individuais móveis no desktop */
+  .linha_tracejada_vertical_container_pai {
+    display: none;
+  }
+
+  /* Timeline Tech: Linha tracejada que para no último card tech e NÃO se liga à psicologia */
+  .path_list_wrapper {
+    position: relative;
+    /* margin-bottom: 1.5rem; */
+  }
+
+  .path_list_wrapper::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    width: 0;
+    border-left: 3px dashed #09b8a9;
+    z-index: 0;
+  }
+
+  /* Botão "O que fiz antes?" isolado sem linha tracejada o cruzando */
+  .btn_container {
+    justify-content: flex-start;
+    padding-left: 50px;
+  }
+
+  .btn_container span {
+    width: auto;
+    padding: 0.55rem 1.5rem;
+    background-color: #ffffff;
+    border: 1.5px solid #5440c3;
+    border-radius: 24px;
+    box-shadow: 0 2px 8px rgba(84, 64, 195, 0.08);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #5440c3;
+    transition: all 0.2s ease;
+  }
+
+  .btn_container span:hover {
+    background-color: #f6f4fe;
+    border-color: #43329f;
+    text-decoration: none;
+  }
+
+  /* Seção de Psicologia: Título e timeline própria isolada */
+  .more_study_container h3 {
+    text-align: left;
+    margin: 0;
+  }
+
+  .psychology_list_wrapper {
+    position: relative;
+    /* margin-top: 1.5rem; */
+  }
+
+  .psychology_list_wrapper::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    width: 0;
+    border-left: 3px dashed #09b8a9;
+    z-index: 0;
+  }
+
+  /* Cards da trajetória em desktop (para tech e psicologia) */
+  .professional_background_item {
+    position: relative;
+    width: calc(100% - 50px);
+    max-width: 80%;
+    margin: 1.25rem 0 1.25rem 50px;
+    padding: 1.15rem 1.25rem;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    gap: 1.25rem;
+    z-index: 1;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .professional_background_item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .professional_background_item img {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .background_item_text_wrapper {
+    flex: 1;
+    gap: 0.25rem;
+  }
+
+  .background_item_text_wrapper h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e1e2d;
+  }
+
+  .background_item_text_wrapper span {
+    font-size: 0.8rem;
+    color: #555566;
+    line-height: 1.4;
+  }
+
+  /* Marcador do nó perfeitamente centralizado sobre a linha tracejada */
+  .timeline_dot {
+    display: block;
+    position: absolute;
+    left: -28.5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    background-color: #09b8a9;
+    border: 2.5px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1.5px #09b8a9;
+    z-index: 2;
+  }
+}
+
+/* Telas maiores (Desktop / Laptops amplos) */
+@media (min-width: 1024px) {
+  .hero_container {
+    width: 20rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .hero img {
+    width: 84px;
+    height: 84px;
+  }
+
+  .image_label_wrapper h3 {
+    font-size: 1.05rem;
+  }
+
+  .image_label_wrapper span {
+    font-size: 0.7rem;
+  }
+
+  .hero button {
+    max-width: 170px;
+    font-size: 0.8rem;
+  }
+
+  .long_resume {
+    font-size: 0.77rem;
+  }
+
+  .long_resume h2 {
+    font-size: 0.92rem;
+  }
+
+  .hero_span_list span {
+    font-size: 0.67rem;
+    padding: 0.25rem 0.45rem;
+  }
+
+  .professional_background {
+    padding: 2.5rem 3.5rem 4rem 3.5rem;
+  }
+
+  .section_title {
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem 0;
+  }
 }
