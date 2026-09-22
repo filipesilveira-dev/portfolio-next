@@ -4,9 +4,9 @@ export default function Form() {
   return (
     <div className={style.form_container}>
       <h3>Seu nome</h3>
-      <input type="text" placeholder="Ex.: Maria Silva"/>
+      <input type="text" placeholder="Ex.: Maria Silva" required/>
       <h3>Seu E-mail</h3>
-      <input type="email" placeholder="Ex.: maria@email.com"/>
+      <input type="email" placeholder="Ex.: maria@email.com" required/>
       <h3>Assunto</h3>
       <input list="subjects" id="subject" name="subject" />
       <datalist id="subjects">

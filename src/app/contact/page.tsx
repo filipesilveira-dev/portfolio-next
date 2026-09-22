@@ -13,33 +13,108 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className={style.availability_container}>
-        <span className={style.availability}>
-          Disponível para novos projetos
-        </span>
+      <div className={style.availability_form_container}>
+        <div className={style.availability_info_container}>
+          <div className={style.availability_container}>
+            <span className={style.availability_mobile}>
+              <strong>Disponível para novos projetos</strong>
+            </span>
+            <span className={style.availability_desktop}>
+              <strong>Disponível para novas oportunidades e freelance</strong>
+            </span>
+          </div>
+
+          {/* Lnks de contato em telas maiores */}
+          {/* LinkedIn em telas maiores */}
+          <a
+            className={style.linkedIn_desktop_text_container}
+            href="https://www.linkedin.com/in/filipe-silveira-511889351/"
+            target="_blanck"
+            title="LinkedIn"
+          >
+            <div className={style.linkedIn_desktop_text_wrapper}>
+              <span>LinkedIn</span>
+              <div className={style.linkedIn_desktop_text}>
+                <p>/in/filipe-silveira-511889351/</p>
+              </div>
+            </div>
+            <div className={style.btn}>Abrir</div>
+          </a>
+
+          {/* GitHub em telas maiores */}
+          <a
+            className={style.gitHub_desktop_text_container}
+            href="https://github.com/filipesilveira-dev"
+            target="_blanck"
+            title="GitHub"
+          >
+            <div className={style.gitHub_desktop_text_wrapper}>
+              <span>GitHub</span>
+              <div className={style.gitHub_desktop_text}>
+                <p>github.com/filipesilveira-dev</p>
+              </div>
+            </div>
+
+            <div className={style.btn}>Abrir</div>
+          </a>
+
+          {/* Localização em telas maiores */}
+          <div className={style.location_desktop_text_container}>
+            <div className={style.location_desktop_text_wrapper}>
+              <span>Localização</span>
+              <div className={style.location_desktop_text}>
+                <p>Brasil</p>
+                <strong>
+                  <span>Fortaleza/CE</span>
+                </strong>
+              </div>
+            </div>
+          </div>
+
+          {/* Modalidades em telas maiores */}
+          <div className={style.model_desktop_text_container}>
+            <div className={style.model_desktop_text_wrapper}>
+              <span>Modalidades</span>
+              <div className={style.model_desktop_text}>
+                <p>Remoto</p>
+                <strong>
+                  <span>Híbrido</span>
+                </strong>
+                <strong>
+                  <span>Presencial</span>
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Aparece apenas em telas menores */}
+        <div className={style.contacts_container}>
+          <a
+            className={style.linkedIn}
+            href="https://www.linkedin.com/in/filipe-silveira-511889351/"
+            target="_blanck"
+            title="LinkedIn"
+          >
+            LinkedIn
+          </a>
+          <a
+            className={style.gitHub}
+            href="https://github.com/filipesilveira-dev"
+            target="_blanck"
+            title="GitHub"
+          >
+            GitHub
+          </a>
+        </div>
+
+        {/* Container do formulário */}
+        <div className={style.form_container}>
+          <Form />
+        </div>
       </div>
 
-      <div className={style.contacts_container}>
-        <a
-          className={style.linkedIn}
-          href="https://www.linkedin.com/in/filipe-silveira-511889351/"
-          target="_blanck"
-          title="LinkedIn"
-        >
-          LinkedIn
-        </a>
-        <a
-          className={style.gitHub}
-          href="https://github.com/filipesilveira-dev"
-          target="_blanck"
-          title="GitHub"
-        >
-          GitHub
-        </a>
-      </div>
-
-      <Form />
-
+      {/* Localização em telas pequenas */}
       <div className={style.location_text_container}>
         <div className={style.location_text_wrapper}>
           <span>Localização</span>
@@ -52,6 +127,7 @@ export default function Contact() {
         </div>
       </div>
 
+      {/* Modalidades em telas pequenas */}
       <div className={style.model_text_container}>
         <div className={style.model_text_wrapper}>
           <span>Modalidades</span>

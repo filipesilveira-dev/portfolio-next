@@ -22,7 +22,11 @@
   margin: 1rem;
 }
 
-.availability {
+.availability_desktop{
+  display: none;
+}
+
+.availability_mobile {
   color: #159172;
   background-color: #eafcf5;
   padding: 0.5rem;
@@ -31,7 +35,7 @@
   font-size: small;
 }
 
-.availability::before {
+.availability_mobile::before {
   display: inline-block;
   width: 0.35rem;
   height: 0.35rem;
@@ -218,4 +222,313 @@
   margin-right: .25rem;
   border-radius: 50%;
   vertical-align: middle;
+}
+
+.location_desktop_text_container{
+  display: none;
+}
+
+.model_desktop_text_container{
+  display: none;
+}
+
+.linkedIn_desktop_text_wrapper{
+  display: none;
+}
+
+.gitHub_desktop_text_container{
+  display: none;
+}
+
+.btn{
+  display: none;
+}
+
+@media(min-width: 768px){
+  .contacts_container{
+    display: none;
+    min-width: 50rem;
+  }
+
+  .availability_mobile{
+    display: none;
+  }
+
+.availability_desktop {
+  display: inline-block;
+  color: #159172;
+  background-color: #eafcf5;
+  padding: 0.5rem;
+  border-radius: 15px;
+  margin: auto;
+  font-size: small;
+}
+
+.availability_desktop::before {
+  display: inline-block;
+  width: 0.35rem;
+  height: 0.35rem;
+  content: "";
+  border-radius: 50%;
+  background-color: #12c98e;
+  margin-right: 0.25rem;
+  margin-bottom: 0.1rem;
+}
+
+.location_text_container{
+  display: none;
+}
+
+.model_text_container{
+  display: none;
+}
+
+.availability_form_container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_container{
+  width: 60%;
+}
+
+/* LinkedIn em telas maiores */
+.linkedIn_desktop_text_container {
+  display: flex;
+  width: 98%;
+  align-items: center;
+  margin: 1rem;
+  padding-right: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+}
+
+.linkedIn_desktop_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  font-size: small;
+}
+
+.linkedIn_desktop_text_wrapper span {
+  color: #9398aa;
+}
+
+.linkedIn_desktop_text_wrapper p {
+  font-weight: 600;
+}
+
+.linkedIn_desktop_text_container::before {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  content: "";
+  background-image: url("/linkedin.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+  margin-bottom: 0.1rem;
+  /* background-color: #eee9fe; */
+  padding: 0.5rem;
+  /* border-radius: 8px; */
+  margin-left: 0.5rem;
+}
+
+.linkedIn_desktop_text {
+  display: flex;
+  align-items: center;
+  font-size: smaller;
+  gap: 0.25rem;
+}
+
+/* GitHub em telas maiores */
+.gitHub_desktop_text_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98%;
+  margin: 1rem;
+  padding-right: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+}
+
+.btn{
+  display: inline-block;
+  padding: .5rem;
+  margin-left: auto;
+  background-color: #EEE9FE;
+  color: #5437A3;
+  border-radius: 10px;
+  font-size: smaller;
+  font-weight: 600;
+}
+
+.gitHub_desktop_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  font-size: small;
+}
+
+.gitHub_desktop_text_wrapper span {
+  color: #9398aa;
+}
+
+.gitHub_desktop_text_wrapper p {
+  font-weight: 600;
+}
+
+.gitHub_desktop_text_container::before {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  content: "";
+  background-image: url("/github.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+  margin-bottom: 0.1rem;
+  /* background-color: #eee9fe; */
+  padding: 0.5rem;
+  /* border-radius: 8px; */
+  margin-left: 0.5rem;
+}
+
+.gitHub_desktop_text {
+  display: flex;
+  align-items: center;
+  font-size: smaller;
+  gap: 0.25rem;
+}
+
+/* Localização em telas maiores */
+.location_desktop_text_container {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  width: 98%;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+}
+
+.location_desktop_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  font-size: small;
+}
+
+.location_desktop_text_wrapper span {
+  color: #9398aa;
+}
+
+.location_desktop_text_wrapper p {
+  font-weight: 600;
+}
+
+.location_desktop_text_container::before {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  content: "";
+  background-image: url("/location.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+  margin-bottom: 0.1rem;
+  background-color: #eee9fe;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-left: 0.5rem;
+}
+
+.location_desktop_text {
+  display: flex;
+  align-items: center;
+  font-size: smaller;
+  gap: 0.25rem;
+}
+
+.location_desktop_text span {
+  color: black;
+}
+
+.location_desktop_text span::before {
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  content: "";
+  background-color: black;
+  margin-right: .25rem;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+/* Modalidades em telas maiores */
+.model_desktop_text_container {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  width: 98%;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+}
+
+.model_desktop_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  font-size: small;
+}
+
+.model_desktop_text_wrapper span {
+  color: #9398aa;
+}
+
+.model_desktop_text_wrapper p {
+  font-weight: 600;
+}
+
+.model_desktop_text_container::before {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  content: "";
+  background-image: url("/work2.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+  margin-bottom: 0.1rem;
+  background-color: #eee9fe;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-left: 0.5rem;
+}
+
+.model_desktop_text {
+  display: flex;
+  align-items: center;
+  font-size: smaller;
+  gap: 0.25rem;
+}
+
+.model_desktop_text span {
+  color: black;
+}
+
+.model_desktop_text span::before {
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  content: "";
+  background-color: black;
+  margin-right: .25rem;
+  border-radius: 50%;
+  vertical-align: middle;
+}
 }
