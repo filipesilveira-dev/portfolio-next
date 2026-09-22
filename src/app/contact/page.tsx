@@ -20,20 +20,50 @@ export default function Contact() {
       </div>
 
       <div className={style.contacts_container}>
-                   <a className={style.linkedIn} href="https://www.linkedin.com/in/filipe-silveira-511889351/" target="_blanck" title="LinkedIn">LinkedIn</a>
-         <a className={style.gitHub} href="https://github.com/filipesilveira-dev" target="_blanck" title="GitHub">GitHub</a>
+        <a
+          className={style.linkedIn}
+          href="https://www.linkedin.com/in/filipe-silveira-511889351/"
+          target="_blanck"
+          title="LinkedIn"
+        >
+          LinkedIn
+        </a>
+        <a
+          className={style.gitHub}
+          href="https://github.com/filipesilveira-dev"
+          target="_blanck"
+          title="GitHub"
+        >
+          GitHub
+        </a>
       </div>
 
-      <Form/>
+      <Form />
 
       <div className={style.location_text_container}>
         <div className={style.location_text_wrapper}>
           <span>Localização</span>
           <div className={style.location_text}>
             <p>Brasil</p>
-            <strong><span>Fortaleza/CE</span></strong>
+            <strong>
+              <span>Fortaleza/CE</span>
+            </strong>
           </div>
-          
+        </div>
+      </div>
+
+      <div className={style.model_text_container}>
+        <div className={style.model_text_wrapper}>
+          <span>Modalidades</span>
+          <div className={style.model_text}>
+            <p>Remoto</p>
+            <strong>
+              <span>Híbrido</span>
+            </strong>
+            <strong>
+              <span>Presencial</span>
+            </strong>
+          </div>
         </div>
       </div>
     </>
