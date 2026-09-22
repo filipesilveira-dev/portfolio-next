@@ -11,6 +11,9 @@ export default function Contact() {
         <p className={style.subtitle}>
           Preencha o formulário ou use um dos canais diretos abaixo.
         </p>
+        <p className={style.subtitle_desktop}>
+          Tem um <strong>projeto</strong> em mente, uma <strong>proposta de trabalho</strong> ou quer apenas trocar ideias sobre <strong>tecnologia</strong>, <strong>migração de carreira</strong> ou mesmo <strong>Psicologia e sua relação com a tecnologia</strong>? Preencha o formulário abaixo ou utilize os canais diretos.
+        </p>
       </div>
 
       <div className={style.availability_form_container}>
