@@ -16,14 +16,23 @@
 .subtitle {
   width: 90%;
   margin: 0.5rem auto 1rem auto;
+ color: #767684;
+}
+
+
+.subtitle_desktop {
+  display: none;
 }
 
 /* Lista com as teconologias */
 .list_container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-columns: 1fr;
   margin: 1rem auto;
+}
+
+.list_container:hover {
+  transform: translateY(-2px);
 }
 
 .list_item_container {
@@ -39,13 +48,21 @@
     transform 0.25s ease,
     box-shadow 0.25s ease,
     border-color 0.25s ease;
-    min-width: 13rem;
+  min-width: 13rem;
+}
+
+.list_item_container:hover {
+  transform: translateY(-2px);
 }
 
 .list_item_text_wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.skill_desktop_container{
+  display: none;
 }
 
 /* Variantes de level de habilidade */
@@ -70,8 +87,77 @@
 .advanced {
   padding: 0.5rem;
   border-radius: 10px;
-  background-color: #E9E5FA;
+  background-color: #e9e5fa;
   color: #534876;
   font-weight: 600;
   font-size: smaller;
+}
+
+@media (min-width: 476px) {
+  .list_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 676px) {
+  .list_container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .subtitle {
+    display: none;
+  }
+
+  .subtitle_desktop {
+    display: block;
+    width: 90%;
+    margin: 0.5rem auto 1rem auto;
+    color: #767684;
+  }
+
+  @media (min-width: 768px) {
+    .list_container {
+      display: none;
+    }
+
+    .skill_desktop_container {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+    }
+
+    .skill_desktop_container h3 {
+      margin: 1rem;
+    }
+
+    .list_desktop_container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .list_item_container {
+      display: flex;
+      max-width: 6rem;
+    }
+
+    .list_item_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      gap: 1rem;
+    }
+
+    .topics_wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topics_wrapper span {
+      font-weight: 600;
+      font-size: smaller;
+      line-height: 1rem;
+    }
+  }
 }

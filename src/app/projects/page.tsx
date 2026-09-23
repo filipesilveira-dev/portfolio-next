@@ -17,8 +17,10 @@ export default function Projects() {
           <span>Projetos</span> Desenvolvidos
         </h2>
         <p className={style.subtitle}>
-          Uma seleção dos meus principais projetos, experimentos e exercícios
-          front-end.
+          Uma seleção dos meus principais <strong>projetos</strong>, <strong>experimentos</strong> e <strong>
+            exercícios
+            front-end
+          </strong>.
         </p>
       </div>
 
