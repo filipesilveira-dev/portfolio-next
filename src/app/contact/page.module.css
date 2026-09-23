@@ -65,6 +65,7 @@
   border: 1px solid rgba(0, 0, 0, 0.212);
   border-radius: 15px;
   background-color: #f7f7fc;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 .linkedIn:hover {
@@ -111,6 +112,7 @@
   margin: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.212);
   border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 .location_text_wrapper {
@@ -172,6 +174,7 @@
   margin: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.212);
   border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 .model_text_wrapper {
@@ -318,6 +321,7 @@
     padding-right: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.212);
     border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   }
 
   .linkedIn_desktop_text_container:hover{
@@ -373,6 +377,7 @@
     padding-right: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.212);
     border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   }
 
   .gitHub_desktop_text_container:hover{
@@ -437,6 +442,7 @@
     width: 98%;
     border: 1px solid rgba(0, 0, 0, 0.212);
     border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   }
 
   .location_desktop_text_wrapper {
@@ -501,6 +507,7 @@
     width: 98%;
     border: 1px solid rgba(0, 0, 0, 0.212);
     border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   }
 
   .model_desktop_text_wrapper {
