@@ -18,7 +18,7 @@ interface NavItem {
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  // Hook Next js que permite ler a URL. Ou seja, sempre que ela mudar, o Next.js re-renderiza na navbar
+  // Hook Next js que permite ler a URL. Ou seja, sempre que ela mudar, o Next.js re-renderiza na navbar. Será usado no código para comparar o que está no path (caminho) da barra de endereço com o path (propriedade passada para indicar o "href" do Link). Caso sejam iguais, a estilização de "ativo" será aplicada
   const pathName = usePathname();
 
   const navItems: NavItem[] = [
@@ -26,7 +26,7 @@ export function Header() {
     { id: "about", label: "Sobre", path: "/about" },
     { id: "projects", label: "Projetos", path: "/projects" },
     { id: "skills", label: "Habilidades", path: "/skills" },
-    { id: "articles", label: "Artigos", path: "/articles" },
+    // { id: "articles", label: "Artigos", path: "/articles" },
     { id: "contact", label: "Contato", path: "/contact" },
   ];
 

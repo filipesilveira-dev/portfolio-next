@@ -11,6 +11,15 @@ import next from "../../public/tech_logos/Next.js.png";
 import vercel from "../../public/tech_logos/vercel.png";
 import git from "../../public/tech_logos/git.png";
 import github from "../../public/tech_logos/githubLight.png";
+import gitHubActions from "../../public/tech_logos/gitHubActions.png";
+import jest from "../../public/tech_logos/jest.png";
+import rtl from "../../public/tech_logos/rtl.png";
+import vite from "../../public/tech_logos/vite-js-256-logo.png";
+import mfe from "../../public/tech_logos/microfrontend.png";
+import pwa from "../../public/tech_logos/pwa.png";
+import restApi from "../../public/tech_logos/restApi.png";
+import zustand from "../../public/tech_logos/zustand.svg";
+import gitHubPages from "../../public/tech_logos/GitHubPages.png";
 
 export const skills = [
   {
@@ -83,6 +92,7 @@ export const skills = [
       "Módulos e APIs do Node.js,",
       "Criação de APIs e servidores.",
     ],
+    type: "testTools",
   },
   {
     id: "react",
@@ -106,6 +116,7 @@ export const skills = [
       "Transições entre estados,",
       "Animações baseadas em interação.",
     ],
+    type: "frontEndCore",
   },
   {
     id: "next",
@@ -120,10 +131,46 @@ export const skills = [
     type: "frontEndCore",
   },
   {
+    id: "jest",
+    name: "Jest",
+    img: jest,
+    skillLv: "Básico",
+    topics: [
+      "Testes unitários com matchers,",
+      "Mocks e spies básicos,",
+      "Execução e configuração inicial.",
+    ],
+    type: "testTools",
+  },
+  {
+    id: "rtl",
+    name: "React Testing Library",
+    img: rtl,
+    skillLv: "Básico",
+    topics: [
+      "Renderização de componentes em testes,",
+      "Seleção de elementos por queries,",
+      "Simulação de eventos básicos.",
+    ],
+    type: "testTools",
+  },
+  {
+    id: "vite",
+    name: "Vite",
+    img: vite,
+    skillLv: "Básico",
+    topics: [
+      "Configuração inicial de projetos,",
+      "Hot Module Replacement (HMR),",
+      "Build otimizado para produção.",
+    ],
+    type: "testTools",
+  },
+  {
     id: "vercel",
     name: "Vercel",
     img: vercel,
-    skillLv: "",
+    skillLv: "Básico",
     topics: [
       "Deploy de aplicações Next.js,",
       "Integração com GitHub,",
@@ -147,12 +194,84 @@ export const skills = [
     id: "github",
     name: "GitHub",
     img: github,
-    skillLv: "",
+    skillLv: "Básico",
     topics: [
       "Repositórios e branches,",
       "Pull Requests e Issues,",
       "GitHub Actions e CI/CD.",
     ],
     type: "testTools",
+  },
+  {
+    id: "gitHubActions",
+    name: "GitHub Actions",
+    img: gitHubActions,
+    skillLv: "Básico",
+    topics: [
+      "Criação de workflows YAML,",
+      "Automação de testes e build,",
+      "Triggers de eventos (push, pull request).",
+    ],
+    type: "testTools",
+  },
+  {
+    id: "gitHubPages",
+    name: "GitHub Pages",
+    img: gitHubPages,
+    skillLv: "Básico",
+    topics: [
+      "Publicação de sites estáticos,",
+      "Configuração via repositório,",
+      "Deploy automático a partir de branches.",
+    ],
+    type: "testTools",
+  },
+  {
+    id: "mfe",
+    name: "Micro Front-end",
+    img: mfe,
+    skillLv: "Básico",
+    topics: [
+      "Conceitos de aplicações independentes,",
+      "Integração entre múltiplos front-ends,",
+      "Compartilhamento de componentes básicos.",
+    ],
+    type: "arqState",
+  },
+  {
+    id: "pwa",
+    name: "PWA",
+    img: pwa,
+    skillLv: "Básico",
+    topics: [
+      "Service Workers básicos,",
+      "Manifesto de aplicação web,",
+      "Cache e funcionamento offline.",
+    ],
+    type: "arqState",
+  },
+  {
+    id: "restApi",
+    name: "REST API",
+    img: restApi,
+    skillLv: "Básico",
+    topics: [
+      "Métodos HTTP (GET, POST, PUT, DELETE),",
+      "Consumo de endpoints,",
+      "Manipulação de requisições e respostas.",
+    ],
+    type: "arqState",
+  },
+  {
+    id: "zustand",
+    name: "Zustand",
+    img: zustand,
+    skillLv: "Básico",
+    topics: [
+      "Criação de stores simples,",
+      "Gerenciamento de estado global básico,",
+      "Hooks de acesso ao estado.",
+    ],
+    type: "arqState",
   },
 ];
