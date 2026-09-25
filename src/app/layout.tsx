@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Portfolio de Filipe P. Silveira",
   description: "Portfólio pessoal desenvolvido para apresentar minha trajetória, projetos e habilidades como desenvolvedor Front-end.",
+  other: {
+    "color-scheme": "light",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
