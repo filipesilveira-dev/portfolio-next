@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio de Filipe P. Silveira",
+  title: "Filipe P. Silveira | Desenvolvedor Front-end",
   description: "Portfólio pessoal desenvolvido para apresentar minha trajetória, projetos e habilidades como desenvolvedor Front-end.",
   other: {
     "color-scheme": "light",
