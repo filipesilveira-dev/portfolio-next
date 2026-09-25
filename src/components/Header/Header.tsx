@@ -118,13 +118,13 @@ export function Header() {
                 >
                   Habilidades
                 </Link>
-                <Link
+                {/* <Link
                   className={style.nav_bar_list_item_open}
                   href="/articles"
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   Artigos
-                </Link>
+                </Link> */}
                 <Link
                   className={style.nav_bar_list_item_open}
                   href="/contact"

@@ -49,11 +49,13 @@
 .swiper {
   width: 100%;
   padding: 0.5rem 0.25rem 1rem 0.25rem;
+  background-color: #FFFFFF;
 }
 
 .swiper_slide {
   height: auto;
   display: flex;
+  background-color: #FFFFFF;
 }
 
 /* Setas de navegação */
@@ -163,9 +165,9 @@
   }
 }
 
-@media (max-width: 1200px){
+/* @media (max-width: 1200px){
 
-}
+} */
 
 /* @media (prefers-color-scheme: dark) {
   .projects_section h2 {
