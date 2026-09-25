@@ -7,7 +7,7 @@ import ts from "../../public/tech_logos/typescript.png";
 import node from "../../public/tech_logos/nodejs.png";
 import react from "../../public/tech_logos/react.png";
 import motion from "../../public/tech_logos/motion.png";
-import next from "../../public/tech_logos/Next.js.png";
+import next from "../../public/tech_logos/next.js.png";
 import vercel from "../../public/tech_logos/vercel.png";
 import git from "../../public/tech_logos/git.png";
 import github from "../../public/tech_logos/githubLight.png";
