@@ -22,11 +22,16 @@ export const projects = [
     img: balanceMe,
     imgM: balanceMeMobile,
     resume: "Veja seu equilíbrio diário",
+    resume2:"",
     description:
       "O Balance Me é uma aplicação web interativa concebida para auxiliar no autogerenciamento diário. Muitas vezes nos sentimos sobrecarregados sem entender a real proporção entre o que precisamos fazer (obrigações) e o que nos recarrega as energias (lazer e descanso). Com uma proposta visual, simples e intuitiva, o usuário atribui pesos e níveis de intensidade a cada atividade do seu dia, permitindo que a aplicação gere uma régua de equilíbrio proporcional e dinâmica.",
     url: "https://github.com/filipesilveira-dev/balance-me-app",
     deploy: "https://filipesilveira-dev.github.io/balance-me-app/",
     tech: ["React", "Typescript", "CSS Modules"],
+    about: "O Balance Me surge da interceção entre duas áreas minhas de interesse: a tecnologia e a Psicologia. Tendo por base meu background de atuação como psicólogo no mais diversos campos, venho dedicando minhas atenção a identificar porblemas, questões ou pontos de melhoria que a tecnologia poderia resolver. Esta aplicação surge como uma ferramenta para ser utilizada pelo usuário do serviço de psicológia para gerar uma noção visual e organizada de como tem equilibrado suas atividades.",
+    status: ["MVP publicado", "Em andamento"],
+    type: "Projeto Pessoal",
+    functions: [""]
   },
   {
     id: 2,
