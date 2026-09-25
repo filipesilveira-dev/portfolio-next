@@ -210,7 +210,7 @@
   font-size: 1.15rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 580px) {
   .about_container {
     display: flex;
     flex-direction: row;
@@ -487,8 +487,8 @@
   /* Cards da trajetória em desktop (para tech e psicologia) */
   .professional_background_item {
     position: relative;
-    width: calc(100% - 50px);
-    max-width: 80%;
+    /* width: calc(100% - 50px); */
+    max-width: 100%;
     margin: 1.25rem 0 1.25rem 50px;
     padding: 1.15rem 1.25rem;
     background-color: #ffffff;
@@ -519,6 +519,10 @@
   }
 
   .background_item_text_wrapper h4 {
+    font-weight: bolder;
+  }
+
+  .background_item_text_wrapper h4 {
     font-size: 0.95rem;
     font-weight: 700;
     color: #1e1e2d;
@@ -544,6 +548,13 @@
     border-radius: 50%;
     box-shadow: 0 0 0 1.5px #09b8a9;
     z-index: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .professional_background_item {
+    width: calc(100% - 50px);
+    max-width: 80%;
   }
 }
 

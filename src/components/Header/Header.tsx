@@ -99,17 +99,17 @@ export function Header() {
                 </Link>
                 <Link
                   className={style.nav_bar_list_item_open}
-                  href="/projects"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
-                  Projetos
-                </Link>
-                <Link
-                  className={style.nav_bar_list_item_open}
                   href="/about"
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   Sobre
+                </Link>
+                <Link
+                  className={style.nav_bar_list_item_open}
+                  href="/projects"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  Projetos
                 </Link>
                 <Link
                   className={style.nav_bar_list_item_open}
