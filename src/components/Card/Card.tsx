@@ -7,11 +7,12 @@ interface CardProps {
   resume: string;
   tech: string[];
   img: string | StaticImageData;
+  slug: string;
 }
 
-export default function Card({ img, name, resume, tech }: CardProps) {
+export default function Card({ img, name, resume, tech, slug }: CardProps) {
   return (
-    <Link href="/projects" className={style.link_wrapper}>
+    <Link href={`/projects/${slug}`} className={style.link_wrapper}>
       <div className={style.card_img_wrapper}>
         <Image
           className={style.card_img}
