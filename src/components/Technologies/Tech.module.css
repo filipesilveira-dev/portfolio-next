@@ -23,6 +23,10 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
+  flex-shrink: 0;           /* adicionado: nunca encolhe */
+  width: max-content;       /* adicionado: largura = soma real dos filhos, sempre */
+
   /* aplica a animação entre os grupos */
   animation: spin 20s infinite linear;
   /* Garante que a trnsição de pausa;retorno não seja abrupta */
@@ -38,6 +42,9 @@
 .card {
   /* causa overflox no carrousel */
   flex: 0 0 5rem;
+
+  width: 5rem;  /* adicionado: reforça o que flex-basis já deveria garantir */
+
   height: 5rem;
   padding: 1rem;
   /* background-color: blue; */
@@ -52,12 +59,8 @@
 
 /* Criação da animação */
 @keyframes spin {
-  from {
-    translate: 0;
-  }
-  to {
-    translate: -100%;
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
 }
 
 @media (min-width: 1200px) {
