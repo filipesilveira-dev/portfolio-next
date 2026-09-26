@@ -1,4 +1,4 @@
-// import style from "./page.module.css"
+import style from "./page.module.css";
 // import { projects } from "@/utils/projects"
 import balanceMe from "../../../../public/prints/balanceMe.png";
 import Image from "next/image";
@@ -64,56 +64,81 @@ export default function Project() {
   // const project = projects.find((p)=> p.slug === slug)
   return (
     <>
-      <h2>{projetoTeste.name}</h2>
-      <p>{projetoTeste.resume2}</p>
-      <Image
-        src={projetoTeste.img}
-        height={200}
-        width={300}
-        alt={`Imagem do prjeto ${projetoTeste.name}`}
-      />
+      <div className={style.text_wrapper}>
+        <h2 className={style.title}>{projetoTeste.name}</h2>
+        <p className={style.subtitle}>{projetoTeste.resume2}</p>
+      </div>
+      <div className={style.img_wrapper}>
+        <Image
+          src={projetoTeste.img}
+          height={200}
+          width={300}
+          alt={`Imagem do prjeto ${projetoTeste.name}`}
+        />
+      </div>
 
       {/* Card contendo as informações do projeto */}
-      <div>
-        <h3>Informações</h3>
-        <h4>Tecnologias</h4>
-        {projetoTeste.tech.map((t) => (
-          <span key={t}>{t}</span>
-        ))}
-        <h4>Status</h4>
-        <span>{projetoTeste.status}</span>
-
-        {projetoTeste.deploy && (
-          <a
-            href={projetoTeste.deploy}
-            target="_blanck"
-            title={projetoTeste.name}
-          >
-            Ver projeto publicado
-          </a>
-        )}
-        <a href={projetoTeste.url} target="_blanck" title={projetoTeste.name}>
-          Ver no GitHub
-        </a>
-      </div>
+      <div className={style.card_wrapper}>
+        <div className={style.card_container}>
+          <h3>Informações</h3>
+          <div className={style.tech_container}>
+            <h4>Tecnologias</h4>
+            <div className={style.tech_wrapper}>
+              {projetoTeste.tech.map((t) => (
+                <span key={t}>{t}</span>
+              ))}
+            </div>
+          </div>
+          <div className={style.status_container}>
+            <h4>Status</h4>
+            <span>{projetoTeste.status}</span>
+          </div>
+          <div className={style.type_container}>
+            <h4>Tipo</h4>
+            <span>{projetoTeste.type}</span>
+          </div>
+          <div className={style.btn_container}>
+            {projetoTeste.deploy && (
+              <a
+                href={projetoTeste.deploy}
+                target="_blanck"
+                title={projetoTeste.name}
+              >
+                Ver projeto publicado
+              </a>
+            )}
+            <a
+              href={projetoTeste.url}
+              target="_blanck"
+              title={projetoTeste.name}
+            >
+              Ver no GitHub
+            </a>
+          </div>
+        </div>
         {/* Fim do Card com as informações */}
+      </div>
 
-      <h3>Sobre</h3>
-      <p>{projetoTeste.about}</p>
+      <div className={style.about_description_text_wrapper}>
+        <h3>Sobre</h3>
+        <p> {projetoTeste.about}</p>
+      </div>
 
-      <h3>Descrição</h3>
-      <p>{projetoTeste.description}</p>
+      <div className={style.about_description_text_wrapper}>
+        <h3>Descrição</h3>
+        <p>{projetoTeste.description}</p>
+      </div>
 
       <h3>Funcionalidades</h3>
-      {projetoTeste.functions.map((f)=>(
+      {projetoTeste.functions.map((f) => (
         <div key={f.function}>
-            <h4>{f.function}</h4>
-            <p>{f.subtitle}</p>
+          <h4>{f.function}</h4>
+          <p>{f.subtitle}</p>
         </div>
       ))}
 
       <h3>Conceitos aplicados</h3>
-      {projetoTeste.concepts.map((concept)=> (
+      {projetoTeste.concepts.map((concept) => (
         <span key={concept}>{concept}</span>
       ))}
 
@@ -122,7 +147,6 @@ export default function Project() {
 
       <h3>Aprendizados</h3>
       <p>{projetoTeste.experience}</p>
-
     </>
   );
 }

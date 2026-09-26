@@ -5,6 +5,7 @@
     flex-direction: column;
     background-color: white;
 }
+
 .img_wrapper {
   position: relative; /* Obrigatório ao usar fill no Next Image */
   width: 100%;        /* Faz o container ocupar toda a largura disponível */
