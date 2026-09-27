@@ -8,8 +8,8 @@
   padding: 1rem;
   gap: 0.5rem;
   text-align: center;
-background-color: #F6F5F9;
-border-radius: 10px;
+  background-color: #f6f5f9;
+  border-radius: 10px;
 }
 
 .container img {
@@ -20,6 +20,6 @@ border-radius: 10px;
   background-color: #636363;
 }
 
-.container h4{
+.container h4 {
   margin: 1rem;
 }

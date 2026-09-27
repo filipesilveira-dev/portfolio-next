@@ -64,106 +64,150 @@ export default function Project() {
   };
   // const project = projects.find((p)=> p.slug === slug)
   return (
-    <>
+    <div className={style.project_section}>
+      {/* Título e subtítulo */}
       <div className={style.text_wrapper}>
         <h2 className={style.title}>{projetoTeste.name}</h2>
         <p className={style.subtitle}>{projetoTeste.resume2}</p>
       </div>
-      <div className={style.img_wrapper}>
-        <Image
-          src={projetoTeste.img}
-          height={200}
-          width={300}
-          alt={`Imagem do prjeto ${projetoTeste.name}`}
-          title={projetoTeste.name}
-        />
-      </div>
 
-      {/* Card contendo as informações do projeto */}
-      <div className={style.card_wrapper}>
-        <div className={style.card_container}>
-          <h3>Informações</h3>
-          <div className={style.tech_container}>
-            <h4>Tecnologias</h4>
-            <div className={style.tech_wrapper}>
-              {projetoTeste.tech.map((t) => (
-                <span key={t}>{t}</span>
+      <div className={style.img_card_information_wrapper}>
+        <div className={style.img_card_wrapper}>
+          {/* Imagem */}
+          <div className={style.img_wrapper}>
+            <Image
+              src={projetoTeste.img}
+              height={200}
+              width={300}
+              alt={`Imagem do prjeto ${projetoTeste.name}`}
+              title={projetoTeste.name}
+            />
+          </div>
+          {/* Card contendo as informações do projeto */}
+          <div className={style.card_wrapper}>
+            {/* Link em telas maiores */}
+            <Link href="/projects" className={style.link_container_desktop}>
+              <Image
+                src="/arrow.svg"
+                width={20}
+                height={20}
+                alt="Seta para voltar"
+              />
+              <span>Voltar para projetos</span>
+            </Link>
+
+            <div className={style.card_container}>
+              <h3>Informações</h3>
+              <div className={style.tech_container}>
+                <h4>Tecnologias</h4>
+                <div className={style.tech_wrapper}>
+                  {projetoTeste.tech.map((t) => (
+                    <span key={t}>{t}</span>
+                  ))}
+                </div>
+              </div>
+              <div className={style.status_container}>
+                <h4>Status</h4>
+                <span>{projetoTeste.status}</span>
+              </div>
+              <div className={style.type_container}>
+                <h4>Tipo</h4>
+                <span>{projetoTeste.type}</span>
+              </div>
+              <div className={style.btn_container}>
+                {projetoTeste.deploy && (
+                  <a
+                    href={projetoTeste.deploy}
+                    target="_blanck"
+                    title={projetoTeste.name}
+                  >
+                    Ver projeto publicado
+                  </a>
+                )}
+                <a
+                  href={projetoTeste.url}
+                  target="_blanck"
+                  title={projetoTeste.name}
+                >
+                  Ver no GitHub
+                </a>
+              </div>
+            </div>
+            {/* Fim do Card com as informações */}
+          </div>
+        </div>
+
+        <div className={style.information_wrapper}>
+          {/* Título e subtítulo telas maiores */}
+          <div className={style.text_wrapper_desktop}>
+            <h2 className={style.title}>{projetoTeste.name}</h2>
+            <p className={style.subtitle}>{projetoTeste.resume2}</p>
+          </div>
+
+          {/* Imagem do projeto em telas maiores */}
+          <div className={style.img_container}>
+            <Image
+              src={projetoTeste.img}
+              height={200}
+              width={303}
+              alt={`Imagem do prjeto ${projetoTeste.name}`}
+              title={projetoTeste.name}
+              className={style.img_desktop}
+            />
+          </div>
+
+          {/* Imagem para telas a partir de 992px */}
+          <div className={style.img_container_desktop}>
+            <Image
+              src={projetoTeste.img}
+              height={400}
+              width={606}
+              alt={`Imagem do prjeto ${projetoTeste.name}`}
+              title={projetoTeste.name}
+              className={style.img_desktop}
+            />
+          </div>
+
+          <div className={style.about_description_text_wrapper}>
+            <h3>Sobre</h3>
+            <p> {projetoTeste.about}</p>
+          </div>
+          <div className={style.about_description_text_wrapper}>
+            <h3>Descrição</h3>
+            <p>{projetoTeste.description}</p>
+          </div>
+          <div className={style.function_container}>
+            <h3>Funcionalidades</h3>
+            {projetoTeste.functions.map((f) => (
+              <div key={f.function} className={style.function_wrapper}>
+                <h4>{f.function}</h4>
+                <p>{f.subtitle}</p>
+              </div>
+            ))}
+          </div>
+          <div className={style.concepts_container}>
+            <h3>Conceitos aplicados</h3>
+            <div className={style.concepts_wrapper}>
+              {projetoTeste.concepts.map((concept) => (
+                <span key={concept}>{concept}</span>
               ))}
             </div>
           </div>
-          <div className={style.status_container}>
-            <h4>Status</h4>
-            <span>{projetoTeste.status}</span>
+          <div className={style.about_description_text_wrapper}>
+            <h3>Desafios</h3>
+            <p>{projetoTeste.challenges}</p>
           </div>
-          <div className={style.type_container}>
-            <h4>Tipo</h4>
-            <span>{projetoTeste.type}</span>
-          </div>
-          <div className={style.btn_container}>
-            {projetoTeste.deploy && (
-              <a
-                href={projetoTeste.deploy}
-                target="_blanck"
-                title={projetoTeste.name}
-              >
-                Ver projeto publicado
-              </a>
-            )}
-            <a
-              href={projetoTeste.url}
-              target="_blanck"
-              title={projetoTeste.name}
-            >
-              Ver no GitHub
-            </a>
+          <div className={style.about_description_text_wrapper}>
+            <h3>Aprendizados</h3>
+            <p>{projetoTeste.experience}</p>
           </div>
         </div>
-        {/* Fim do Card com as informações */}
-      </div>
-
-      <div className={style.about_description_text_wrapper}>
-        <h3>Sobre</h3>
-        <p> {projetoTeste.about}</p>
-      </div>
-
-      <div className={style.about_description_text_wrapper}>
-        <h3>Descrição</h3>
-        <p>{projetoTeste.description}</p>
-      </div>
-
-      <div className={style.function_container}>
-        <h3>Funcionalidades</h3>
-        {projetoTeste.functions.map((f) => (
-          <div key={f.function} className={style.function_wrapper}>
-            <h4>{f.function}</h4>
-            <p>{f.subtitle}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className={style.concepts_container}>
-        <h3>Conceitos aplicados</h3>
-        <div className={style.concepts_wrapper}>
-          {projetoTeste.concepts.map((concept) => (
-            <span key={concept}>{concept}</span>
-          ))}
-        </div>
-      </div>
-
-      <div className={style.about_description_text_wrapper}>
-        <h3>Desafios</h3>
-        <p>{projetoTeste.challenges}</p>
-      </div>
-
-      <div className={style.about_description_text_wrapper}>
-        <h3>Aprendizados</h3>
-        <p>{projetoTeste.experience}</p>
       </div>
 
       <Link href="/projects" className={style.link_container}>
         <Image src="/arrow.svg" width={30} height={30} alt="Seta para voltar" />
         <span>Voltar para projetos</span>
       </Link>
-    </>
+    </div>
   );
 }
