@@ -2,6 +2,7 @@ import style from "./page.module.css";
 // import { projects } from "@/utils/projects"
 import balanceMe from "../../../../public/prints/balanceMe.png";
 import Image from "next/image";
+import Link from "next/link";
 
 // interface ProjectProps{
 //     slug: string;
@@ -74,6 +75,7 @@ export default function Project() {
           height={200}
           width={300}
           alt={`Imagem do prjeto ${projetoTeste.name}`}
+          title={projetoTeste.name}
         />
       </div>
 
@@ -129,24 +131,39 @@ export default function Project() {
         <p>{projetoTeste.description}</p>
       </div>
 
-      <h3>Funcionalidades</h3>
-      {projetoTeste.functions.map((f) => (
-        <div key={f.function}>
-          <h4>{f.function}</h4>
-          <p>{f.subtitle}</p>
+      <div className={style.function_container}>
+        <h3>Funcionalidades</h3>
+        {projetoTeste.functions.map((f) => (
+          <div key={f.function} className={style.function_wrapper}>
+            <h4>{f.function}</h4>
+            <p>{f.subtitle}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className={style.concepts_container}>
+        <h3>Conceitos aplicados</h3>
+        <div className={style.concepts_wrapper}>
+          {projetoTeste.concepts.map((concept) => (
+            <span key={concept}>{concept}</span>
+          ))}
         </div>
-      ))}
+      </div>
 
-      <h3>Conceitos aplicados</h3>
-      {projetoTeste.concepts.map((concept) => (
-        <span key={concept}>{concept}</span>
-      ))}
+      <div className={style.about_description_text_wrapper}>
+        <h3>Desafios</h3>
+        <p>{projetoTeste.challenges}</p>
+      </div>
 
-      <h3>Desafios</h3>
-      <p>{projetoTeste.challenges}</p>
+      <div className={style.about_description_text_wrapper}>
+        <h3>Aprendizados</h3>
+        <p>{projetoTeste.experience}</p>
+      </div>
 
-      <h3>Aprendizados</h3>
-      <p>{projetoTeste.experience}</p>
+      <Link href="/projects" className={style.link_container}>
+        <Image src="/arrow.svg" width={30} height={30} alt="Seta para voltar" />
+        <span>Voltar para projetos</span>
+      </Link>
     </>
   );
 }
