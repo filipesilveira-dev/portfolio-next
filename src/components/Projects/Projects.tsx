@@ -19,6 +19,7 @@ export interface Projeto {
   name: string;
   resume: string;
   tech: string[];
+  slug: string;
 }
 
 export default function Projects() {

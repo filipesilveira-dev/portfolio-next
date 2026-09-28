@@ -1,3 +1,7 @@
+.project_section{
+  white-space: pre-line;
+}
+
 .text_wrapper {
   width: 100%;
   background-color: #f7f7fc;

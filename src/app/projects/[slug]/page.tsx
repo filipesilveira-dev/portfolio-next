@@ -12,12 +12,11 @@ interface Props {
 // Precisa ser um export de nível superior do arquivo, não uma função
 // declarada dentro do componente. É essa exportação que o Next.js
 // procura e chama automaticamente durante o build.
-export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
-}
+// export function generateStaticParams() {
+//   return projects.map((project) => ({ slug: project.slug }));
+// }
 
-// O componente da página em si passa a ser o export default,
-// recebendo "params" diretamente como prop
+// O componente da página recebe "params" diretamente como prop
 export default async function Project({ params }: Props) {
   const { slug } = await params;
 
