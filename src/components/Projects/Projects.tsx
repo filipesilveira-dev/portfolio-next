@@ -104,6 +104,7 @@ export default function Projects() {
                 name={project.name}
                 resume={project.resume}
                 tech={project.tech}
+                slug={project.slug}
               />
             </SwiperSlide>
           ))}

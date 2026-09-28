@@ -65,6 +65,7 @@
 .tech_wrapper {
   display: flex;
   /* flex-direction: column; */
+  flex-wrap: wrap;
   gap: 0.75rem;
   padding-top: 0.5rem;
   color: #767684;
@@ -292,6 +293,7 @@
   .card_container{
     margin: .25rem;
     padding: .5rem;
+    background-color: white;
   }
 
   .card_wrapper{
@@ -333,6 +335,9 @@
   /* Coluna da direita */
   .text_wrapper_desktop {
     display: inline-block;
+    margin: 0;
+    padding-top: 1rem;
+    width: 100%;
   }
 
   .img_desktop {
@@ -377,6 +382,15 @@
     display: flex;
     margin: auto;
     padding-block: 1rem;
-    background-color: #F8F8FC;
+    background-color: #DDDDDD;
+    background: linear-gradient(to right, rgb(190, 180, 180),#DDDDDD);
   }
+
+  .img_container_desktop img{
+    object-fit: contain;
+    border-radius: 15px;
+    /* border: 1px solid rgba(0, 0, 0, 0.08); */
+    /* box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02); */
+  }
+
 }

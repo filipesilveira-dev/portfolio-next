@@ -33,7 +33,7 @@ const projectsWithoutSlug = [
     tech: ["React", "Typescript", "CSS Modules"],
     about:
       "O Balance Me surge da interceção entre duas áreas minhas de interesse: a tecnologia e a Psicologia. Tendo por base meu background de atuação como psicólogo no mais diversos campos, venho dedicando minhas atenção a identificar porblemas, questões ou pontos de melhoria que a tecnologia poderia resolver. Esta aplicação surge como uma ferramenta para ser utilizada pelo usuário do serviço de psicológia para gerar uma noção visual e organizada de como tem equilibrado suas atividades.",
-    status: ["MVP publicado", "Em andamento"],
+    status: ["MVP publicado | em andamento"],
     type: "Projeto Pessoal",
     functions: [
       {
