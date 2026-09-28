@@ -20,6 +20,7 @@ import pwa from "../../public/tech_logos/pwa.png";
 import restApi from "../../public/tech_logos/restApi.png";
 import zustand from "../../public/tech_logos/zustand.svg";
 import gitHubPages from "../../public/tech_logos/GitHubPages.png";
+import gimp from "../../public/tech_logos/gimp.png";
 
 export const skills = [
   {
@@ -273,5 +274,17 @@ export const skills = [
       "Hooks de acesso ao estado.",
     ],
     type: "arqState",
+  },
+  {
+    id: "gimp",
+    name: "GIMP",
+    img: gimp,
+    skillLv: "Básico",
+    topics: [
+      "Edição e recorte de imagens,",
+      "Uso de camadas e transparência,",
+      "Ajustes básicos de imagem.",
+    ],
+    type: "testTools",
   },
 ];
