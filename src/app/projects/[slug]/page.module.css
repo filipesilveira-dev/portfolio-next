@@ -1,4 +1,4 @@
-.project_section{
+.project_section {
   white-space: pre-line;
 }
 
@@ -30,6 +30,7 @@
 
 .img_wrapper img {
   border: 1px solid rgba(0, 0, 0, 0.055);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   border-radius: 10px;
 }
 
@@ -236,7 +237,7 @@
   text-decoration: underline;
 }
 
-.link_container_desktop{
+.link_container_desktop {
   display: none;
 }
 
@@ -248,7 +249,7 @@
   display: none;
 }
 
-.img_container_desktop{
+.img_container_desktop {
   display: none;
 }
 
@@ -276,7 +277,7 @@
     top: 4rem; /* Colada no topo logo abaixo do header fixo (height: 4rem) */
     left: 0; /* Colada na margem esquerda da tela */
     height: calc(100vh - 4rem); /* Ocupa exatamente a altura disponível */
-    background-color: #F8F8FC;
+    background-color: #f8f8fc;
     border-right: 1px solid rgba(0, 0, 0, 0.08);
     border-top: none;
     border-left: none;
@@ -287,20 +288,20 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    
+
     overflow-y: auto;
     z-index: 1;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
 
-  .card_container{
-    margin: .25rem;
-    padding: .5rem;
+  .card_container {
+    margin: 0.25rem;
+    padding: 0.5rem;
     background-color: white;
   }
 
-  .card_wrapper{
+  .card_wrapper {
     display: flex;
     flex-direction: column;
     height: 10rem;
@@ -317,10 +318,9 @@
     color: #5437a3;
     font-weight: 600;
     font-size: small;
-    
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .link_container_desktop img {
@@ -347,13 +347,16 @@
   .img_desktop {
     display: inline-block;
     margin: auto;
+    /* border: 1px solid rgba(0, 0, 0, 0.055); */
+    /* box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    border-radius: 10px; */
   }
 
   .img_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F8F8FC;
+    background-color: #f8f8fc;
     padding-block: 1rem;
   }
 
@@ -377,24 +380,23 @@
   }
 }
 
-@media (min-width: 992px){
-  .img_container{
+@media (min-width: 992px) {
+  .img_container {
     display: none;
   }
 
-  .img_container_desktop{
+  .img_container_desktop {
     display: flex;
     margin: auto;
     padding-block: 1rem;
-    background-color: #DDDDDD;
-    background: linear-gradient(to right, rgb(190, 180, 180),#DDDDDD);
+    background-color: #dddddd;
+    background: linear-gradient(to right, rgb(190, 180, 180), #dddddd);
   }
 
-  .img_container_desktop img{
+  .img_container_desktop img {
     object-fit: contain;
     border-radius: 15px;
     /* border: 1px solid rgba(0, 0, 0, 0.08); */
     /* box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02); */
   }
-
 }

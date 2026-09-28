@@ -14,6 +14,8 @@ import diarioDeBordoMobile from "../../public/prints/diarioDeBordoMobile.png";
 import tudoDevBlog from "../../public/prints/tudoDevBlog.png";
 import tudoDevBlogMobile from "../../public/prints/tudoDevBlogMobile.png";
 
+import portfolioV1 from "../../public/prints/portfolioV1.png";
+
 import slugify from "slugify";
 
 // Arquivo que fornece os dados consumidos na aplicação
@@ -344,6 +346,79 @@ const projectsWithoutSlug = [
       "O principal desafio foi compreender o modelo de desenvolvimento do Next.js e diferenciar responsabilidades entre componentes executados no servidor e no cliente, além de trabalhar com rotas dinâmicas e diferentes estratégias de renderização.",
     experience:
       "O projeto proporcionou uma introdução prática ao ecossistema Next.js, especialmente ao App Router, Server Components, rotas dinâmicas, geração estática e estratégias de obtenção de dados no servidor.",
+  },
+   {
+    id: 6,
+    name: "Portfolio (primeira versão)",
+    img: portfolioV1,
+    imgM: "",
+    resume: "Primeira versão do portfolio elaborada",
+    resume2:
+      "Primeira versão do portfolio feita com base em um desafio do Bootcamp Santander 2025 - Front-End da DIO",
+    description:
+      "Projeto de Portfolio originado de um desafio realizado no Bootcamp Santender 2025. O desafio em questão teve como objetivo a aprendizagem. Consistiu na construção guiada de uma página web do zero baseada em um protótipo do figma, contendo informações profissionais, como currículo, projetos e tecnologias com as quais possui familiaridade. \n \nAqui ele foi refatorado em React e Typescript, utiliznado a biblioteca Motion para as transições do 'accordion'. Foram aproveitados o layout e a paleta de cores do projeto original. As funcionalidades foram adaptadas e a parte de projetos foi contruída do zero.",
+    url: "https://github.com/filipesilveira-dev/desafiosBootcampSantander2025/tree/main/projetoPortfolio",
+    deploy: "https://filipesilveira-dev.github.io/portfolio/",
+    tech: ["React", "Typescript", "CSS Modules", "Motion"],
+    about: "Durante meu processo de formação, me deparei com diversos projetos. Todos de alguma maneira contribuíram para eu chegar onde estou hoje. Um desses projetos consistia na elaboração guiada de uma página web com informações profissionais. Na época, ele foi elaborado utilizando HTML, CSS e JavaScript Vanilla. O projeto foi finalizado, porém algumas informações estavam faltando, pois se tratava do meu primeiro Bootcamp em Front-end. Tinha apenas o conhecimento básico. Então alguns campos acabaram ficando em branco e a parte de projetos vazia. \n \n Chegando em 2026, mais especificamente em agosto, finalizo a primeira parte do curso 'Desenvolvedor Front-End' da EBAC e seu trabalho final consistia justamente na elaboração de um portfólio. Porém, uma das exigências era o uso de React em sua elaboração. Apesar da obrigatoriedade, por conta dos conhecimentos acumulados ao longo do meu tempo de estudo, React seria a biblioteca Javascript utilizada nesse projeto independente, pois, além da maior familiaridade, dentre outras possibilidades que a ferramenta oferece, o uso de useState() facilitaria algumas re-renderizações em tela. Sendo assim, refatorei toda a aplicação para React, o que gerou alguns aprendizados durante, como o uso da biblioteca Motion para as transições de abertura/fechamento dos 'accordions'. \n \nOptei por apresentar essa primeira versão pois ela demonstra um pouco sobre como enxergo o processo de trabalho. Ao finalizar e entregar o trabalho de conclusão de curso, não me senti representado naquele projeto, me gerando um incômodo que sabia muito bem como resolvê-lo: criar um portfólio que de fato me veja nele e que represente o que sou capaz de fazer e o tanto de empenho que costumo aplicar em meus projetos. Ou seja, a primeira versão serviu como degrau para esta página atual que, apesar de ainda ter melhorias a serem feitas e funções a serem implementadas, me representa muito mais profissionalmente.",
+    status: "MVP publicado",
+    type: "Projeto originado de curso realizado",
+functions: [
+  {
+    function: "Apresentação profissional",
+    subtitle:
+      "organização de informações sobre formação, trajetória e conhecimentos em desenvolvimento front-end",
+  },
+  {
+    function: "Apresentação de tecnologias",
+    subtitle:
+      "exibição das principais tecnologias e ferramentas estudadas durante a formação",
+  },
+  {
+    function: "Apresentação de projetos",
+    subtitle:
+      "listagem e organização dos projetos desenvolvidos ao longo do processo de formação",
+  },
+  {
+    function: "Accordion de informações",
+    subtitle:
+      "exibição e ocultação de conteúdos por meio de seções expansíveis",
+  },
+  {
+    function: "Navegação por seções",
+    subtitle:
+      "organização do conteúdo em diferentes áreas para facilitar a navegação pela página",
+  },
+  {
+    function: "Transições de interface",
+    subtitle:
+      "animação da abertura e fechamento dos accordions utilizando a biblioteca Motion",
+  },
+  {
+    function: "Layout responsivo",
+    subtitle:
+      "adaptação da apresentação das informações para diferentes tamanhos de tela",
+  },
+],
+
+concepts: [
+  "React",
+  "TypeScript",
+  "Componentização",
+  "Props",
+  "UseState",
+  "Renderização condicional",
+  "CSS Modules",
+  "Motion",
+  "Design responsivo",
+  "Refatoração de aplicação",
+],
+
+challenges:
+  "O principal desafio foi transformar uma aplicação originalmente desenvolvida com HTML, CSS e JavaScript Vanilla em uma aplicação React com TypeScript, preservando a identidade visual do projeto original e, ao mesmo tempo, adaptando sua estrutura para um modelo baseado em componentes. Também foi necessário estruturar do zero a área de projetos e implementar as interações dos accordions, utilizando o useState para controlar sua abertura e fechamento e a biblioteca Motion para criar as transições.",
+
+experience:
+  "O projeto representou uma etapa importante na evolução dos conhecimentos em desenvolvimento front-end. A refatoração permitiu aplicar React e TypeScript em um projeto que já possuía uma estrutura visual definida, tornando mais concreto o entendimento sobre componentização, gerenciamento de estado e organização da interface. O uso do Motion também proporcionou um primeiro contato prático com animações declarativas. Além dos aspectos técnicos, o projeto evidenciou a importância de revisar e evoluir uma aplicação quando seu resultado já não representa adequadamente o nível de conhecimento alcançado.",
   },
 ];
 

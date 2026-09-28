@@ -143,7 +143,7 @@ export default async function Project({ params }: Props) {
           </div>
 
           <div className={style.about_description_text_wrapper}>
-            <h3>Sobre</h3>
+            <h3>História do Projeto</h3>
             <p>{about}</p>
           </div>
           <div className={style.about_description_text_wrapper}>
