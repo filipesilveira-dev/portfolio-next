@@ -140,11 +140,11 @@
   }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .dot:nth-child(n + 5) {
     display: none;
   }
-}
+} */
 
 @media (min-width: 1200px) {
     .projects_section{
