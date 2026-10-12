@@ -135,7 +135,7 @@
 
 /* Responsividade dos dots: oculta dots excedentes conforme a quantidade de cards visíveis */
 @media (min-width: 576px) {
-  .dot:nth-child(n + 6) {
+  .dot:nth-child(n + 7) {
     display: none;
   }
 }
