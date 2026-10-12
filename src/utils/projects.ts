@@ -14,6 +14,9 @@ import diarioDeBordoMobile from "../../public/prints/diarioDeBordoMobile.png";
 import tudoDevBlog from "../../public/prints/tudoDevBlog.png";
 import tudoDevBlogMobile from "../../public/prints/tudoDevBlogMobile.png";
 
+import reflectMe from "../../public/prints/reflectMe.png";
+import reflectMeMobile from "../../public/prints/reflectMeM.png";
+
 import portfolioV1 from "../../public/prints/portfolioV1.png";
 
 import slugify from "slugify";
@@ -22,6 +25,100 @@ import slugify from "slugify";
 const projectsWithoutSlug = [
   {
     id: 1,
+    name: "Reflect Me",
+    img: reflectMe,
+    imgM: reflectMeMobile,
+    resume: "Reflexões guiadas e acompanhamento entre sessões",
+    resume2:
+      "Uma aplicação desenvolvida com Angular para organizar reflexões, acompanhar respostas e facilitar o acompanhamento entre profissionais e usuários.",
+    description:
+      "Aplicação front-end desenvolvida com Angular para gerenciamento de reflexões guiadas em um contexto de acompanhamento profissional. A plataforma permite que profissionais criem reflexões direcionadas a usuários específicos, acompanhem respostas e consultem o histórico de interações. Os usuários podem responder às reflexões recebidas, editar suas respostas e consultar seu histórico. O projeto explora conceitos do Angular, organização de componentes, roteamento, injeção de dependências, serviços e persistência de dados no navegador.",
+    url: "https://github.com/filipesilveira-dev/reflect-me",
+    deploy: "https://filipesilveira-dev.github.io/reflect-me/login",
+    tech: ["Angular", "TypeScript", "Tailwind CSS"],
+    about: "O 'Reflect Me' marca o primeiro momento na minha carreira em que resolvi arriscar e experimentar algo diferente. Ao longo dos meus estudos, tenho focado mais em tecnologias como React e Next.js, já me apresentando bastante familiarizado com elas. Porém, uma inquietação surgiu ao observar uma outra tecnologia, até então completamente desconhecida por mim, que também é bastante utilizada no front-end: o Angular. Desde então, decidi que precisava experimentar algo novo, diferente, sair da zona de conforto. Como já tinha o conceito do 'Reflect Me' na cabeça, decidi colocá-lo em prática utilizando essa nova tecnologia por meio da criação da aplicação de maneira guiada. Ou seja, utilizei os chats de IA para me ensinarem a construir utilizando a ferramenta e não apenas dando o código e explicando depois. Tenho percebido que essa modalidade de aprendizado me tem sido muito útil para aprender coisas novas sem me tornar totalmente dependente. Confesso que tive bastante dificuldade em entender a lógica dos componentes 'standalones', em contrapartida dos componentes reutilizáveis em React, e principalmente com a arquitetura e sintaxe na organização. Sua grande vantagem a meu ver é justamente montar o componente completo: tudo o que você irá precisar está ali naquela pasta com 4 arquivos. Não precisa se preocupar em passar nada via props ou utilizar alguma ferramenta de gerenciamento de estado global. Creio que minha base em componentes reutilizáveis e modularização com React tornaram minha curva de aprendizado menos íngreme. Acredito que com o tempo e principalmente prática eu consiga dominar a tecnologia e tirar máximo proveito da mesma.",
+    status: "MVP em desenvolvimento",
+    type: "Projeto autoral",
+    functions: [
+      {
+        function: "Painel do profissional",
+        subtitle:
+          "visualização do total de reflexões, pendências, respostas e usuários vinculados ao profissional",
+      },
+      {
+        function: "Gerenciamento de reflexões",
+        subtitle:
+          "criação e organização de reflexões direcionadas a usuários específicos",
+      },
+      {
+        function: "Acompanhamento de respostas",
+        subtitle:
+          "visualização das reflexões pendentes e respondidas pelos usuários",
+      },
+      {
+        function: "Página individual do usuário",
+        subtitle:
+          "acesso às informações e às reflexões vinculadas a cada usuário",
+      },
+      {
+        function: "Registro de respostas",
+        subtitle: "envio de respostas às reflexões recebidas pelo usuário",
+      },
+      {
+        function: "Edição de respostas",
+        subtitle:
+          "alteração de respostas registradas, com opção de salvar ou cancelar as modificações",
+      },
+      {
+        function: "Histórico de reflexões",
+        subtitle:
+          "consulta às reflexões respondidas e às respectivas respostas",
+      },
+      {
+        function: "Exclusão de respostas",
+        subtitle:
+          "remoção de uma resposta para que a reflexão volte ao estado de pendente",
+      },
+      {
+        function: "Persistência local",
+        subtitle:
+          "armazenamento e recuperação dos dados utilizando localStorage",
+      },
+      {
+        function: "Navegação por rotas",
+        subtitle:
+          "acesso às páginas de login, profissional e usuário por meio do roteamento do Angular",
+      },
+    ],
+    concepts: [
+      "Angular",
+      "TypeScript",
+      "Standalone Components",
+      "Componentes e templates",
+      "Angular Router",
+      "Parâmetros de rota",
+      "Injeção de dependências",
+      "Services",
+      "Programação orientada a objetos",
+      "Renderização condicional com @if",
+      "Renderização de listas com @for",
+      "Manipulação de formulários",
+      "Persistência com localStorage",
+      "Serialização e desserialização com JSON",
+      "Organização de modelos e dados",
+      "Manipulação de estado na aplicação",
+      "Tailwind CSS",
+      "GitHub Actions",
+      "CI/CD",
+      "GitHub Pages",
+    ],
+    challenges:
+      "O principal desafio é compreender e aplicar a arquitetura do Angular em uma aplicação prática, organizando componentes, modelos, serviços e rotas de forma coerente. Outros desafios envolvem gerenciar os estados das reflexões, distinguir conteúdos pendentes e respondidos, persistir alterações no navegador e relacionar os dados aos usuários e profissionais correspondentes.",
+    experience:
+      "O projeto proporciona experiência prática com o ecossistema Angular e seus principais mecanismos de desenvolvimento, especialmente componentes standalone, roteamento, injeção de dependências e serviços. Também permite explorar persistência de dados no navegador, organização de responsabilidades e construção de uma aplicação com fluxos distintos para profissionais e usuários.",
+  },
+  {
+    id: 2,
     name: "Balance Me",
     img: balanceMe,
     imgM: balanceMeMobile,
@@ -78,7 +175,7 @@ const projectsWithoutSlug = [
   },
 
   {
-    id: 2,
+    id: 3,
     name: "Dice Roller",
     img: diceRoller,
     imgM: diceRollerMobile,
@@ -99,7 +196,8 @@ const projectsWithoutSlug = [
       "React Testing Library",
       "GitHub Actions",
     ],
-    about: "Abrindo um novo momento da minha carreira, o Dice Roller surge como o primeiro projeto concebido, elaborado e implementado de maneira autoral. Sua origem vem de uma busca por desenvolver ferramentas que auxiliassem na resolução de problemas reais e cotidianos. Seguindo uma dica de revisitar antigos projetos de cursos, me deparei com o 'Jogo do Bruxo'. Ele consiste em uma aplicação simples, desenvolvida com HTML, CSS e JavaScript Vanilla, de um jogo de adivinhação. O usuário tem 10 palpites para acertar um número entre 1 e 100, gerado de maneira aleatória, e à medida em que seus palpites vão se esgotando ou à medida em que acerte ou erre, diferentes elementos são exibidos em tela. \n \n Diante disso, busquei imaginar onde uma aplicação como essa, ou as soluções que ela oferece poderiam ser aplicadas para a resolução de algum problema real. Até que cheguei aos jogos de tabuleiro. Apesar de não ser um grande jogador de RPG (Role-Playing Game), jogos de tabuleiro em geral fizeram grande parte da minha infância e adolescência, como Detetive, Scotland Yard, Banco Imobiliário (Monopoly) e etc, e grande parte deles envolviam o uso de dados. Eventualmente, alguns desses dados se perdiam, sendo necessário buscar outros de outros jogos. E se fosse possível ter quantos dados fossem necessários na palma da mão sem precisar ir atrás pelos cantos da casa? Com o Dice Roller é possível fazer exatamente isso. \n \nNem a aplicação nem o relato sobre sua criação têm por objetivo gerar uma revolução no mundo dos jogos, muito menos no mundo tecnológico, mas sim de demonstrar como se dá, nas pequenas coisas, a identificação de um problema e a elaboração de uma solução eficaz para o mesmo. Acredito que é nesse exercício diário que se constrói o potencial para mudanças maiores e realmente impactantes ocorrerem",
+    about:
+      "Abrindo um novo momento da minha carreira, o Dice Roller surge como o primeiro projeto concebido, elaborado e implementado de maneira autoral. Sua origem vem de uma busca por desenvolver ferramentas que auxiliassem na resolução de problemas reais e cotidianos. Seguindo uma dica de revisitar antigos projetos de cursos, me deparei com o 'Jogo do Bruxo'. Ele consiste em uma aplicação simples, desenvolvida com HTML, CSS e JavaScript Vanilla, de um jogo de adivinhação. O usuário tem 10 palpites para acertar um número entre 1 e 100, gerado de maneira aleatória, e à medida em que seus palpites vão se esgotando ou à medida em que acerte ou erre, diferentes elementos são exibidos em tela. \n \n Diante disso, busquei imaginar onde uma aplicação como essa, ou as soluções que ela oferece poderiam ser aplicadas para a resolução de algum problema real. Até que cheguei aos jogos de tabuleiro. Apesar de não ser um grande jogador de RPG (Role-Playing Game), jogos de tabuleiro em geral fizeram grande parte da minha infância e adolescência, como Detetive, Scotland Yard, Banco Imobiliário (Monopoly) e etc, e grande parte deles envolviam o uso de dados. Eventualmente, alguns desses dados se perdiam, sendo necessário buscar outros de outros jogos. E se fosse possível ter quantos dados fossem necessários na palma da mão sem precisar ir atrás pelos cantos da casa? Com o Dice Roller é possível fazer exatamente isso. \n \nNem a aplicação nem o relato sobre sua criação têm por objetivo gerar uma revolução no mundo dos jogos, muito menos no mundo tecnológico, mas sim de demonstrar como se dá, nas pequenas coisas, a identificação de um problema e a elaboração de uma solução eficaz para o mesmo. Acredito que é nesse exercício diário que se constrói o potencial para mudanças maiores e realmente impactantes ocorrerem",
     status: "MVP publicado",
     type: "Projeto Pessoal",
     functions: [
@@ -155,7 +253,7 @@ const projectsWithoutSlug = [
   },
 
   {
-    id: 3,
+    id: 4,
     name: "Sépia Bistrô",
     img: sepiaBistro,
     imgM: sepiaBistroMobile,
@@ -174,8 +272,10 @@ const projectsWithoutSlug = [
       "Module Federation",
       "Micro Frontend",
     ],
-    about: "O projeto tem sua origem em um exercício do curso de 'Desenvolvedor Front-end' da EBAC. Nele estava sendo solicitado a criação de uma aplicação que utilizasse a arquitetura de Micro Frontends. Sendo assim, tanto o conceito (nome e paletas de cores) quanto layout (organização dos componentes em tela) e funcionalidades (a única exigida pela atividade era 'adicionar ao carrinho') foram escolhidos e implementados por mim. Até então, vinha estudando muito SPA (Single Page Aplication) e ter contato com essa forma de construir uma aplicação web ampliou significativamente meu reportório, principalmente se pensarmos em aplicações robustas, grandes times e grandes empresas.",
-    status: "Projeto em repositório remoto sem publicação em site até o momento",
+    about:
+      "O projeto tem sua origem em um exercício do curso de 'Desenvolvedor Front-end' da EBAC. Nele estava sendo solicitado a criação de uma aplicação que utilizasse a arquitetura de Micro Frontends. Sendo assim, tanto o conceito (nome e paletas de cores) quanto layout (organização dos componentes em tela) e funcionalidades (a única exigida pela atividade era 'adicionar ao carrinho') foram escolhidos e implementados por mim. Até então, vinha estudando muito SPA (Single Page Aplication) e ter contato com essa forma de construir uma aplicação web ampliou significativamente meu reportório, principalmente se pensarmos em aplicações robustas, grandes times e grandes empresas.",
+    status:
+      "Projeto em repositório remoto sem publicação em site até o momento",
     type: "Projeto autoral originado de curso realizado",
     functions: [
       {
@@ -224,7 +324,7 @@ const projectsWithoutSlug = [
   },
 
   {
-    id: 4,
+    id: 5,
     name: "Diário de bordo",
     img: diarioDeBordo,
     imgM: diarioDeBordoMobile,
@@ -236,8 +336,10 @@ const projectsWithoutSlug = [
     url: "https://github.com/filipesilveira-dev/frontendGithub/tree/main/diario_de_bordo_PWA",
     deploy: "",
     tech: ["PWA", "Typescript", "React", "Vite", "Zustand"],
-    about: "Trata-se de um projeto originado do curso de 'Desenvolvedor Front-End' da EBAC que consistia na demonstração da nova tecnologia estudada: Progressive Web Apps (PWAs). Consiste em um 'to-do-list' em forma de diário de bordo que permite ao usuário usufruir dos três principais pilares de um PWA: capacidade de executar tarefas que apenas aplicativos nativos poderiam realizar, confiabilidade de utilizar a aplicação independente da qualidade da conexão e instabilidade da aplicação diretamente do navegador, gerando uma aplicação mais visualmente parecida com um aplicativo nativo. Conhecer esse tipo de tecnologia na época ampliou o escopo de 'como as aplicações web podem resolver problemas cotidianos?'. Ou seja, daquele momento em diante estava apto a construir algo que pudesse ser utilizado apesar de conexões com a internet (uma vez já baixado). Isso preveniria o usuário 'ficar à própria sorte' quando sem pacote de dados ou wifi.",
-    status: "Projeto em repositório remoto sem publicação em site até o momento",
+    about:
+      "Trata-se de um projeto originado do curso de 'Desenvolvedor Front-End' da EBAC que consistia na demonstração da nova tecnologia estudada: Progressive Web Apps (PWAs). Consiste em um 'to-do-list' em forma de diário de bordo que permite ao usuário usufruir dos três principais pilares de um PWA: capacidade de executar tarefas que apenas aplicativos nativos poderiam realizar, confiabilidade de utilizar a aplicação independente da qualidade da conexão e instabilidade da aplicação diretamente do navegador, gerando uma aplicação mais visualmente parecida com um aplicativo nativo. Conhecer esse tipo de tecnologia na época ampliou o escopo de 'como as aplicações web podem resolver problemas cotidianos?'. Ou seja, daquele momento em diante estava apto a construir algo que pudesse ser utilizado apesar de conexões com a internet (uma vez já baixado). Isso preveniria o usuário 'ficar à própria sorte' quando sem pacote de dados ou wifi.",
+    status:
+      "Projeto em repositório remoto sem publicação em site até o momento",
     type: "Projeto originado de curso realizado",
     functions: [
       {
@@ -277,7 +379,7 @@ const projectsWithoutSlug = [
   },
 
   {
-    id: 5,
+    id: 6,
     name: "Tudo Dev Blog",
     img: tudoDevBlog,
     imgM: tudoDevBlogMobile,
@@ -289,7 +391,8 @@ const projectsWithoutSlug = [
     url: "https://github.com/filipesilveira-dev/frontendGithub/tree/main/tudo-dev-blog-nextjs",
     deploy: "https://frontend-github-iota.vercel.app/",
     tech: ["Next.js", "Typescript", "CSS Modules"],
-    about: "O TudoDev Blog marca a consolidação dos meus estudos em Next.js. A atividade original solicitava a criação de um blog e que a organização de suas rotas seriam feitas por meio do App Router. Ela me ajudou muito a consolidar alguns temas como 'Server components', 'Rotas dinâmicas' e 'Data fetching', uma vez que, neste último caso, a aplicação simula chamadas de API pensando em aplicações que utilizam bancos de dados ou consumam dados de um servidor de API. Elaborei então um nome e um tema para o blog, gerando pequenos artigos para demonstração. Vale ressaltar que tudo o que foi aprendido neste momento foi utilizado inclusive na elaboração desta página de portfólio, que também utiliza Next.js e seu App Router. Acredito que o aprendizado obtido precisa ser replicado, colocado em prática, caso contrário, não serve de nada.",
+    about:
+      "O TudoDev Blog marca a consolidação dos meus estudos em Next.js. A atividade original solicitava a criação de um blog e que a organização de suas rotas seriam feitas por meio do App Router. Ela me ajudou muito a consolidar alguns temas como 'Server components', 'Rotas dinâmicas' e 'Data fetching', uma vez que, neste último caso, a aplicação simula chamadas de API pensando em aplicações que utilizam bancos de dados ou consumam dados de um servidor de API. Elaborei então um nome e um tema para o blog, gerando pequenos artigos para demonstração. Vale ressaltar que tudo o que foi aprendido neste momento foi utilizado inclusive na elaboração desta página de portfólio, que também utiliza Next.js e seu App Router. Acredito que o aprendizado obtido precisa ser replicado, colocado em prática, caso contrário, não serve de nada.",
     status: "MVP publicado",
     type: "Projeto originado de curso realizado",
     functions: [
@@ -347,8 +450,9 @@ const projectsWithoutSlug = [
     experience:
       "O projeto proporcionou uma introdução prática ao ecossistema Next.js, especialmente ao App Router, Server Components, rotas dinâmicas, geração estática e estratégias de obtenção de dados no servidor.",
   },
-   {
-    id: 6,
+
+  {
+    id: 7,
     name: "Portfolio (primeira versão)",
     img: portfolioV1,
     imgM: "",
@@ -360,65 +464,66 @@ const projectsWithoutSlug = [
     url: "https://github.com/filipesilveira-dev/desafiosBootcampSantander2025/tree/main/projetoPortfolio",
     deploy: "https://filipesilveira-dev.github.io/portfolio/",
     tech: ["React", "Typescript", "CSS Modules", "Motion"],
-    about: "Durante meu processo de formação, me deparei com diversos projetos. Todos de alguma maneira contribuíram para eu chegar onde estou hoje. Um desses projetos consistia na elaboração guiada de uma página web com informações profissionais. Na época, ele foi elaborado utilizando HTML, CSS e JavaScript Vanilla. O projeto foi finalizado, porém algumas informações estavam faltando, pois se tratava do meu primeiro Bootcamp em Front-end. Tinha apenas o conhecimento básico. Então alguns campos acabaram ficando em branco e a parte de projetos vazia. \n \n Chegando em 2026, mais especificamente em agosto, finalizo a primeira parte do curso 'Desenvolvedor Front-End' da EBAC e seu trabalho final consistia justamente na elaboração de um portfólio. Porém, uma das exigências era o uso de React em sua elaboração. Apesar da obrigatoriedade, por conta dos conhecimentos acumulados ao longo do meu tempo de estudo, React seria a biblioteca Javascript utilizada nesse projeto independente, pois, além da maior familiaridade, dentre outras possibilidades que a ferramenta oferece, o uso de useState() facilitaria algumas re-renderizações em tela. Sendo assim, refatorei toda a aplicação para React, o que gerou alguns aprendizados durante, como o uso da biblioteca Motion para as transições de abertura/fechamento dos 'accordions'. \n \nOptei por apresentar essa primeira versão pois ela demonstra um pouco sobre como enxergo o processo de trabalho. Ao finalizar e entregar o trabalho de conclusão de curso, não me senti representado naquele projeto, me gerando um incômodo que sabia muito bem como resolvê-lo: criar um portfólio que de fato me veja nele e que represente o que sou capaz de fazer e o tanto de empenho que costumo aplicar em meus projetos. Ou seja, a primeira versão serviu como degrau para esta página atual que, apesar de ainda ter melhorias a serem feitas e funções a serem implementadas, me representa muito mais profissionalmente.",
+    about:
+      "Durante meu processo de formação, me deparei com diversos projetos. Todos de alguma maneira contribuíram para eu chegar onde estou hoje. Um desses projetos consistia na elaboração guiada de uma página web com informações profissionais. Na época, ele foi elaborado utilizando HTML, CSS e JavaScript Vanilla. O projeto foi finalizado, porém algumas informações estavam faltando, pois se tratava do meu primeiro Bootcamp em Front-end. Tinha apenas o conhecimento básico. Então alguns campos acabaram ficando em branco e a parte de projetos vazia. \n \n Chegando em 2026, mais especificamente em agosto, finalizo a primeira parte do curso 'Desenvolvedor Front-End' da EBAC e seu trabalho final consistia justamente na elaboração de um portfólio. Porém, uma das exigências era o uso de React em sua elaboração. Apesar da obrigatoriedade, por conta dos conhecimentos acumulados ao longo do meu tempo de estudo, React seria a biblioteca Javascript utilizada nesse projeto independente, pois, além da maior familiaridade, dentre outras possibilidades que a ferramenta oferece, o uso de useState() facilitaria algumas re-renderizações em tela. Sendo assim, refatorei toda a aplicação para React, o que gerou alguns aprendizados durante, como o uso da biblioteca Motion para as transições de abertura/fechamento dos 'accordions'. \n \nOptei por apresentar essa primeira versão pois ela demonstra um pouco sobre como enxergo o processo de trabalho. Ao finalizar e entregar o trabalho de conclusão de curso, não me senti representado naquele projeto, me gerando um incômodo que sabia muito bem como resolvê-lo: criar um portfólio que de fato me veja nele e que represente o que sou capaz de fazer e o tanto de empenho que costumo aplicar em meus projetos. Ou seja, a primeira versão serviu como degrau para esta página atual que, apesar de ainda ter melhorias a serem feitas e funções a serem implementadas, me representa muito mais profissionalmente.",
     status: "MVP publicado",
     type: "Projeto originado de curso realizado",
-functions: [
-  {
-    function: "Apresentação profissional",
-    subtitle:
-      "organização de informações sobre formação, trajetória e conhecimentos em desenvolvimento front-end",
-  },
-  {
-    function: "Apresentação de tecnologias",
-    subtitle:
-      "exibição das principais tecnologias e ferramentas estudadas durante a formação",
-  },
-  {
-    function: "Apresentação de projetos",
-    subtitle:
-      "listagem e organização dos projetos desenvolvidos ao longo do processo de formação",
-  },
-  {
-    function: "Accordion de informações",
-    subtitle:
-      "exibição e ocultação de conteúdos por meio de seções expansíveis",
-  },
-  {
-    function: "Navegação por seções",
-    subtitle:
-      "organização do conteúdo em diferentes áreas para facilitar a navegação pela página",
-  },
-  {
-    function: "Transições de interface",
-    subtitle:
-      "animação da abertura e fechamento dos accordions utilizando a biblioteca Motion",
-  },
-  {
-    function: "Layout responsivo",
-    subtitle:
-      "adaptação da apresentação das informações para diferentes tamanhos de tela",
-  },
-],
+    functions: [
+      {
+        function: "Apresentação profissional",
+        subtitle:
+          "organização de informações sobre formação, trajetória e conhecimentos em desenvolvimento front-end",
+      },
+      {
+        function: "Apresentação de tecnologias",
+        subtitle:
+          "exibição das principais tecnologias e ferramentas estudadas durante a formação",
+      },
+      {
+        function: "Apresentação de projetos",
+        subtitle:
+          "listagem e organização dos projetos desenvolvidos ao longo do processo de formação",
+      },
+      {
+        function: "Accordion de informações",
+        subtitle:
+          "exibição e ocultação de conteúdos por meio de seções expansíveis",
+      },
+      {
+        function: "Navegação por seções",
+        subtitle:
+          "organização do conteúdo em diferentes áreas para facilitar a navegação pela página",
+      },
+      {
+        function: "Transições de interface",
+        subtitle:
+          "animação da abertura e fechamento dos accordions utilizando a biblioteca Motion",
+      },
+      {
+        function: "Layout responsivo",
+        subtitle:
+          "adaptação da apresentação das informações para diferentes tamanhos de tela",
+      },
+    ],
 
-concepts: [
-  "React",
-  "TypeScript",
-  "Componentização",
-  "Props",
-  "UseState",
-  "Renderização condicional",
-  "CSS Modules",
-  "Motion",
-  "Design responsivo",
-  "Refatoração de aplicação",
-],
+    concepts: [
+      "React",
+      "TypeScript",
+      "Componentização",
+      "Props",
+      "UseState",
+      "Renderização condicional",
+      "CSS Modules",
+      "Motion",
+      "Design responsivo",
+      "Refatoração de aplicação",
+    ],
 
-challenges:
-  "O principal desafio foi transformar uma aplicação originalmente desenvolvida com HTML, CSS e JavaScript Vanilla em uma aplicação React com TypeScript, preservando a identidade visual do projeto original e, ao mesmo tempo, adaptando sua estrutura para um modelo baseado em componentes. Também foi necessário estruturar do zero a área de projetos e implementar as interações dos accordions, utilizando o useState para controlar sua abertura e fechamento e a biblioteca Motion para criar as transições.",
+    challenges:
+      "O principal desafio foi transformar uma aplicação originalmente desenvolvida com HTML, CSS e JavaScript Vanilla em uma aplicação React com TypeScript, preservando a identidade visual do projeto original e, ao mesmo tempo, adaptando sua estrutura para um modelo baseado em componentes. Também foi necessário estruturar do zero a área de projetos e implementar as interações dos accordions, utilizando o useState para controlar sua abertura e fechamento e a biblioteca Motion para criar as transições.",
 
-experience:
-  "O projeto representou uma etapa importante na evolução dos conhecimentos em desenvolvimento front-end. A refatoração permitiu aplicar React e TypeScript em um projeto que já possuía uma estrutura visual definida, tornando mais concreto o entendimento sobre componentização, gerenciamento de estado e organização da interface. O uso do Motion também proporcionou um primeiro contato prático com animações declarativas. Além dos aspectos técnicos, o projeto evidenciou a importância de revisar e evoluir uma aplicação quando seu resultado já não representa adequadamente o nível de conhecimento alcançado.",
+    experience:
+      "O projeto representou uma etapa importante na evolução dos conhecimentos em desenvolvimento front-end. A refatoração permitiu aplicar React e TypeScript em um projeto que já possuía uma estrutura visual definida, tornando mais concreto o entendimento sobre componentização, gerenciamento de estado e organização da interface. O uso do Motion também proporcionou um primeiro contato prático com animações declarativas. Além dos aspectos técnicos, o projeto evidenciou a importância de revisar e evoluir uma aplicação quando seu resultado já não representa adequadamente o nível de conhecimento alcançado.",
   },
 ];
 
