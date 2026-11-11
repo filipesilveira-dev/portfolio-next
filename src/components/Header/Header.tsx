@@ -7,6 +7,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { usePathname } from "next/navigation";
+import { useTheme } from "@/hooks/useTheme";
+import MoonIcon from "@/assets/icons/moon.svg";
+import SunIcon from "@/assets/icons/sun.svg";
 
 type NavLinkId =
   "home" | "about" | "projects" | "skills" | "articles" | "contact";
@@ -17,6 +20,8 @@ interface NavItem {
 }
 
 export function Header() {
+  // Utiliza o custom hook para estabelecer o valor de theme
+  const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   // Hook Next js que permite ler a URL. Ou seja, sempre que ela mudar, o Next.js re-renderiza na navbar. Será usado no código para comparar o que está no path (caminho) da barra de endereço com o path (propriedade passada para indicar o "href" do Link). Caso sejam iguais, a estilização de "ativo" será aplicada
   const pathName = usePathname();
@@ -68,13 +73,27 @@ export function Header() {
               height={24}
             />
           </button>
-          {/* <Image
-            src="/moon.svg"
-            alt="Imagem de lua"
-            width={36}
-            height={36}
-            className={style.toggle_symbol}
-          /> */}
+          <button
+            onClick={toggleTheme}
+            aria-label="Alternar tema"
+            className={style.darkLightTheme}
+          >
+            {theme === "light" ? (
+              <Image
+                src={MoonIcon}
+                alt="Ativar modo escuro"
+                width={24}
+                height={24}
+              />
+            ) : (
+              <Image
+                src={SunIcon}
+                alt="Ativar modo claro"
+                width={24}
+                height={24}
+              />
+            )}
+          </button>
         </div>
       </section>
 
