@@ -1,27 +1,197 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  color-scheme: light; /* declara explicitamente: só suportamos light */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Superfícies e fundos */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f7fc;
+  --bg-surface: #fdfdfd;
+  --bg-surface-alt: #f6f5f9;
+  --bg-card: #ffffff;
+  --bg-card-alt: #f8f8fc;
+  --bg-hover: #f0f0f0;
+
+  /* Cores de texto */
+  --text-primary: #171717;
+  --text-secondary: #767684;
+  --text-tertiary: #9398aa;
+  --text-heading: #1e1e2d;
+  --text-heading-dark: #1a1a1a;
+  --text-body: #333333;
+  --text-btn: #fdfdfd;
+
+  /* Cores primárias (Roxo) */
+  --primary: #555ed6;
+  --primary-hover: #555ed693;
+  --primary-border-hover: #555ed6;
+  --primary-dark: #5440c3;
+  --primary-darker: #5437a3;
+  --primary-btn-hover: #3e2fa8;
+  --primary-btn-border: #43329f;
+  --primary-light: #eee9fe;
+  --primary-light-hover: #f6f4fe;
+  --primary-text: #5437a3;
+
+  /* Cores de destaque (Teal / Ciano) */
+  --accent: #09b8a9;
+  --accent-light: #e5f4f5;
+  --accent-icon-bg: #09b8aa69;
+
+  /* Badges de nível / Status */
+  --badge-basic-bg: #eafcf5;
+  --badge-basic-text: #159172;
+  --badge-basic-dot: #12c98e;
+  --badge-intermediate-bg: #f4fcea;
+  --badge-intermediate-text: #918f15;
+  --badge-advanced-bg: #e9e5fa;
+  --badge-advanced-text: #534876;
+
+  /* Botão e elementos neutros */
+  --btn-neutral-bg: #000000;
+  --btn-neutral-text: #ffffff;
+  --btn-neutral-border: #000000;
+  --btn-neutral-hover-bg: rgba(0, 0, 0, 0.7);
+
+  /* Elementos de formulário */
+  --input-bg: #ffffff;
+  --input-text: #171717;
+  --input-border: #000000;
+  --form-card-border: rgba(0, 0, 0, 0.233);
+
+  /* Bordas */
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-light: #e5e5eb;
+  --border-medium: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.212);
+  --border-dark: #000000;
+  --border-nav-item: #f0f0f0;
+  --border-primary: rgba(84, 55, 163, 0.12);
+  --border-primary-subtle: rgba(84, 55, 163, 0.08);
+  --border-primary-medium: rgba(84, 55, 163, 0.18);
+  --border-primary-strong: rgba(84, 55, 163, 0.3);
+
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 1px 1px 2px rgba(0, 0, 0, 0.082);
+  --shadow-card-hover: 0 8px 20px rgba(84, 55, 163, 0.14);
+  --shadow-header: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  --shadow-footer: 0 -4px 2px -2px rgba(0, 0, 0, 0.2);
+  --shadow-btn-primary: 0 2px 8px rgba(84, 64, 195, 0.08);
+  --shadow-arrow-hover: 0 6px 18px rgba(84, 55, 163, 0.25);
+  --shadow-subtle: 2px 0 10px rgba(0, 0, 0, 0.02);
+
+  /* Específicos */
+  --gradient-project-banner: linear-gradient(to right, rgb(190, 180, 180), #dddddd);
+  --empty-icon-bg: #636363;
+  --timeline-dot-border: #ffffff;
+
+  /* Variáveis de compatibilidade existentes */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Superfícies e fundos */
+  --bg-primary: #0f0f12;
+  --bg-secondary: #18181b;
+  --bg-surface: #141418;
+  --bg-surface-alt: #1a1a20;
+  --bg-card: #18181b;
+  --bg-card-alt: #1f1f24;
+  --bg-hover: #27272a;
+
+  /* Cores de texto */
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+  --text-heading: #fafafa;
+  --text-heading-dark: #f4f4f5;
+  --text-body: #d4d4d8;
+  --text-btn: #ffffff;
+
+  /* Cores primárias (Roxo adaptado) */
+  --primary: #6366f1;
+  --primary-hover: rgba(99, 102, 241, 0.8);
+  --primary-border-hover: #818cf8;
+  --primary-dark: #7c5ceb;
+  --primary-darker: #a78bfa;
+  --primary-btn-hover: #6d4bd8;
+  --primary-btn-border: #8b5cf6;
+  --primary-light: rgba(124, 92, 235, 0.2);
+  --primary-light-hover: rgba(124, 92, 235, 0.3);
+  --primary-text: #a78bfa;
+
+  /* Cores de destaque (Teal / Ciano) */
+  --accent: #14b8a6;
+  --accent-light: rgba(20, 184, 166, 0.15);
+  --accent-icon-bg: rgba(20, 184, 166, 0.25);
+
+  /* Badges de nível / Status */
+  --badge-basic-bg: rgba(18, 201, 142, 0.15);
+  --badge-basic-text: #34d399;
+  --badge-basic-dot: #10b981;
+  --badge-intermediate-bg: rgba(234, 179, 8, 0.15);
+  --badge-intermediate-text: #facc15;
+  --badge-advanced-bg: rgba(139, 92, 246, 0.2);
+  --badge-advanced-text: #c4b5fd;
+
+  /* Botão e elementos neutros */
+  --btn-neutral-bg: #f4f4f5;
+  --btn-neutral-text: #0f0f12;
+  --btn-neutral-border: #f4f4f5;
+  --btn-neutral-hover-bg: rgba(244, 244, 245, 0.85);
+
+  /* Elementos de formulário */
+  --input-bg: #1e1e24;
+  --input-text: #f4f4f5;
+  --input-border: rgba(255, 255, 255, 0.2);
+  --form-card-border: rgba(255, 255, 255, 0.12);
+
+  /* Bordas */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.12);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --border-dark: rgba(255, 255, 255, 0.25);
+  --border-nav-item: rgba(255, 255, 255, 0.08);
+  --border-primary: rgba(167, 139, 250, 0.2);
+  --border-primary-subtle: rgba(167, 139, 250, 0.1);
+  --border-primary-medium: rgba(167, 139, 250, 0.25);
+  --border-primary-strong: rgba(167, 139, 250, 0.4);
+
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 1px 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 20px rgba(124, 92, 235, 0.25);
+  --shadow-header: 0 4px 2px -2px rgba(0, 0, 0, 0.5);
+  --shadow-footer: 0 -4px 2px -2px rgba(0, 0, 0, 0.5);
+  --shadow-btn-primary: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-arrow-hover: 0 6px 18px rgba(124, 92, 235, 0.35);
+  --shadow-subtle: 2px 0 10px rgba(0, 0, 0, 0.2);
+
+  /* Específicos */
+  --gradient-project-banner: linear-gradient(to right, #27272a, #3f3f46);
+  --empty-icon-bg: #3f3f46;
+  --timeline-dot-border: #18181b;
+
+  /* Variáveis de compatibilidade existentes */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+}
 
 html {
   height: 100%;
-  /* background-color: #F7F7FC; */
 }
 
 html,
 body {
   max-width: 100vw;
-  background-color: var(
-    --background
-  ); /* pintura explícita, sem depender de default do UA */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 body {
@@ -40,11 +210,5 @@ body {
 
 a {
   text-decoration: none;
-  color: #0a0a0a;
+  color: var(--text-primary);
 }
-
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */

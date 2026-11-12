@@ -6,10 +6,10 @@
   padding: 1rem;
   width: 100%;
   height: 4rem;
-  background-color: #fdfdfd;
+  background-color: var(--bg-surface);
   margin-right: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid transparent;
+  box-shadow: var(--shadow-header);
 
   /* necessário para o dropdown se ancorar aqui */
   position: fixed;
@@ -24,7 +24,7 @@
   justify-content: space-between;
 
   height: 4rem;
-  background-color: #fdfdfd;
+  background-color: var(--bg-surface);
   width: 100%;
 }
 
@@ -33,11 +33,11 @@
   border: 0;
   padding: 0.25rem;
   border-radius: 50%;
-  background-color: #fdfdfd;
+  background-color: var(--bg-surface);
 }
 
 .hamburger:hover {
-  background-color: #f0f0f0;
+  background-color: var(--bg-hover);
 }
 
 .nav_bar {
@@ -53,8 +53,8 @@
   left: 0;
   width: 100%;
   overflow: hidden;
-  background-color: #fdfdfd;
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-header);
   z-index: 999;
 }
 
@@ -76,11 +76,11 @@
   padding: 0.25rem;
   border-radius: 10px;
   text-align: center;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid var(--border-nav-item);
 }
 
 .nav_bar_list_item_open:hover {
-  background-color: #f0f0f0;
+  background-color: var(--bg-hover);
 }
 
 .menu_toggle_wrapper {
@@ -97,14 +97,14 @@
 }
 
 .toggle_symbol:hover {
-  background-color: #f0f0f0;
+  background-color: var(--bg-hover);
 }
 
 .darkLightTheme{
   cursor: pointer;
   text-decoration: none;
   border: none;
-  background-color: #fdfdfd;
+  background-color: var(--bg-surface);
 }
 
 .darkLightTheme:hover{
@@ -136,16 +136,15 @@
   }
 
   .nav_bar_item:hover {
-    /* background-color: #f0f0f0; */
-    border: 1px solid rgba(0, 0, 0, 0);
-    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.082);
-    color: #767684;
+    border: 1px solid transparent;
+    box-shadow: var(--shadow-card);
+    color: var(--text-secondary);
   }
 
   .active {
-    border: 1px solid rgba(0, 0, 0, 0);
-    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.082);
-    color: #767684;
+    border: 1px solid transparent;
+    box-shadow: var(--shadow-card);
+    color: var(--text-secondary);
   }
 
   .nav_bar_item {

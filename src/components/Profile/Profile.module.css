@@ -12,26 +12,26 @@
 }
 
 .profile_container span{
-  color: #09B8A9;
+  color: var(--accent);
 }
 
 .profile_container p{
   line-height: 1.5rem;
   font-weight: 500;
-  color: #767684;
+  color: var(--text-secondary);
 }
 
 .profile_container button{
   width: 100%;
-  background-color: #555ED6;
-  color: #fdfdfd;
+  background-color: var(--primary);
+  color: var(--text-btn);
   border: none;
 }
 
 .profile_container button:hover{
-  background-color: #555ed693;
+  background-color: var(--primary-hover);
   cursor: pointer;
-  border: 1px solid #555ED6;
+  border: 1px solid var(--primary-border-hover);
 }
 
 

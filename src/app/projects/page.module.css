@@ -1,6 +1,6 @@
 .text_wrapper {
   width: 100%;
-  background-color: #f7f7fc;
+  background-color: var(--bg-secondary);
   padding: 0.5rem;
 }
 
@@ -10,13 +10,13 @@
 }
 
 .title span {
-  color: #09b8a9;
+  color: var(--accent);
 }
 
 .subtitle {
   width: 90%;
   margin: 0.5rem auto 1rem auto;
-  color: #767684;
+  color: var(--text-secondary);
 }
 
 .title_main_projects {
@@ -41,7 +41,7 @@
 .btn_container span {
   text-align: center;
   width: 50%;
-  color: #5437a3;
+  color: var(--primary-text);
   font-weight: 600;
   border: none;
 }

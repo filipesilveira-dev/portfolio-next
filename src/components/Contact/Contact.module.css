@@ -6,9 +6,9 @@
   margin: 2rem auto;
   padding: 0.5rem;
   gap: 1rem;
-  background-color: #f6f5f9;
+  background-color: var(--bg-surface-alt);
   border-radius: 10px;
-  border: 1px solid rgba(84, 55, 163, 0.12);
+  border: 1px solid var(--border-primary);
 
   width: 90%;
   max-width: 35rem;
@@ -41,16 +41,16 @@
   border-radius: 6px;
 
   width: 70%;
-  background-color: #555ed6;
-  color: #fdfdfd;
+  background-color: var(--primary);
+  color: var(--text-btn);
   border: none;
   margin-bottom: 1rem;
 }
 
 .contact_section button:hover {
-  background-color: #555ed693;
+  background-color: var(--primary-hover);
   cursor: pointer;
-  border: 1px solid #555ed6;
+  border: 1px solid var(--primary-border-hover);
 }
 
 .contact_section img{
@@ -60,7 +60,7 @@
 @media (min-width: 768px) {
   .contact_section img {
     display: block;
-    background-color: #555ed6;
+    background-color: var(--primary);
     border-radius: 50%;
     padding: 0.5rem;
     transform: rotate(-45deg);
