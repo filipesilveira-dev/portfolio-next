@@ -57,6 +57,7 @@
   box-shadow: var(--shadow-card);
 }
 
+
 /* Criação da animação */
 @keyframes spin {
   from { transform: translateX(0); }
