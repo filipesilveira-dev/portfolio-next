@@ -18,6 +18,13 @@
   object-fit: contain; 
 }
 
+/* Trecho que possibilita a renderização condicional da imagem com base no data-theme estabelecido no html globalmente */
+.img_light { display: block; }
+.img_dark  { display: none;  }
+
+:global(html[data-theme="dark"]) .img_light { display: none; }
+:global(html[data-theme="dark"]) .img_dark  { display: block; }
+
 
 @media (min-width: 576px) {
   .hero{
